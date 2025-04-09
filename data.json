@@ -1,0 +1,1885 @@
+{
+    "aliens": [
+        {
+            "name": "Heatblast",
+            "abilities": [
+                "Pyrokinesis",
+                "Fire generation",
+                "Heat resistance",
+                "Flight (via propulsion)"
+            ],
+            "species": "Pyronite",
+            "home_world": "Pyros",
+            "body_type": "Humanoid made of molten rock and fire",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "1",
+                "episode_name": "And Then There Were 10"
+            },
+            "color_scheme": [
+                "red",
+                "orange",
+                "yellow",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 70,
+                "Speed": 50,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A fiery Pyronite from the star Pyros, Heatblast wields intense flames and molten rock, capable of both destruction and flight."
+        },
+        {
+            "name": "Wildmutt",
+            "abilities": [
+                "Enhanced senses (smell, hearing)",
+                "Super strength",
+                "Agility",
+                "Quill projection (evolved in OV)"
+            ],
+            "species": "Vulpimancer",
+            "home_world": "Vulpin",
+            "body_type": "Quadrupedal beast with no eyes",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "1",
+                "episode_name": "And Then There Were 10"
+            },
+            "color_scheme": [
+                "orange",
+                "tan",
+                "black"
+            ],
+            "height": "4 feet (at shoulder)",
+            "stats": {
+                "Strength": 80,
+                "Speed": 70,
+                "Intelligence": 20,
+                "Control": 60
+            },
+            "about": "A blind, beastly Vulpimancer from Vulpin, Wildmutt relies on heightened senses and brute force to tackle foes."
+        },
+        {
+            "name": "Diamondhead",
+            "abilities": [
+                "Crystal manipulation",
+                "Super durability",
+                "Crystal projectiles",
+                "Regeneration"
+            ],
+            "species": "Petrosapien",
+            "home_world": "Petropia",
+            "body_type": "Crystalline humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "1",
+                "episode_name": "And Then There Were 10"
+            },
+            "color_scheme": [
+                "teal",
+                "green",
+                "black"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 85,
+                "Speed": 40,
+                "Intelligence": 50,
+                "Control": 90
+            },
+            "about": "A durable Petrosapien from Petropia, Diamondhead uses crystalline strength and sharp projectiles to dominate battles."
+        },
+        {
+            "name": "XLR8",
+            "abilities": [
+                "Super speed",
+                "Enhanced reflexes",
+                "Friction resistance",
+                "Tail whip"
+            ],
+            "species": "Kineceleran",
+            "home_world": "Kinet",
+            "body_type": "Velociraptor-like humanoid with wheeled feet",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "1",
+                "episode_name": "And Then There Were 10"
+            },
+            "color_scheme": [
+                "blue",
+                "black",
+                "white"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 95,
+                "Intelligence": 40,
+                "Control": 85
+            },
+            "about": "A lightning-fast Kineceleran from Kinet, XLR8 races through challenges with unmatched speed and agility."
+        },
+        {
+            "name": "Grey Matter",
+            "abilities": [
+                "High intelligence",
+                "Small size for stealth",
+                "Wall climbing",
+                "Technological intuition"
+            ],
+            "species": "Galvan",
+            "home_world": "Galvan Prime",
+            "body_type": "Tiny frog-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "2",
+                "episode_name": "Washington B.C."
+            },
+            "color_scheme": [
+                "grey",
+                "white",
+                "green"
+            ],
+            "height": "5 inches",
+            "stats": {
+                "Strength": 10,
+                "Speed": 30,
+                "Intelligence": 95,
+                "Control": 70
+            },
+            "about": "A tiny, brilliant Galvan from Galvan Prime, Grey Matter excels in intellect and tinkering with technology."
+        },
+        {
+            "name": "Four Arms",
+            "abilities": [
+                "Super strength",
+                "Enhanced durability",
+                "Four arms for combat",
+                "Shockwave generation"
+            ],
+            "species": "Tetramand",
+            "home_world": "Khoros",
+            "body_type": "Four-armed muscular humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "2",
+                "episode_name": "Washington B.C."
+            },
+            "color_scheme": [
+                "red",
+                "black",
+                "gold"
+            ],
+            "height": "12 feet",
+            "stats": {
+                "Strength": 90,
+                "Speed": 40,
+                "Intelligence": 30,
+                "Control": 75
+            },
+            "about": "A towering Tetramand from Khoros, Four Arms uses his immense strength and four fists to overpower enemies."
+        },
+        {
+            "name": "Stinkfly",
+            "abilities": [
+                "Flight",
+                "Slime projectiles",
+                "360-degree vision",
+                "Enhanced strength"
+            ],
+            "species": "Lepidopterran",
+            "home_world": "Lepidopterra",
+            "body_type": "Insectoid humanoid with wings",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "2",
+                "episode_name": "Washington B.C."
+            },
+            "color_scheme": [
+                "green",
+                "blue",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 70,
+                "Intelligence": 40,
+                "Control": 65
+            },
+            "about": "A winged Lepidopterran from Lepidopterra, Stinkfly soars and spits sticky slime to trap foes."
+        },
+        {
+            "name": "Ripjaws",
+            "abilities": [
+                "Underwater breathing",
+                "Super swimming",
+                "Powerful jaws",
+                "Sharp claws"
+            ],
+            "species": "Piscciss Volann",
+            "home_world": "Piscciss",
+            "body_type": "Merman-like humanoid with fins",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "3",
+                "episode_name": "The Krakken"
+            },
+            "color_scheme": [
+                "silver",
+                "green",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 75,
+                "Speed": 60,
+                "Intelligence": 30,
+                "Control": 70
+            },
+            "about": "An aquatic Piscciss Volann from Piscciss, Ripjaws thrives underwater with strong jaws and swift swimming."
+        },
+        {
+            "name": "Upgrade",
+            "abilities": [
+                "Technological merging",
+                "Shape-shifting",
+                "Weapon enhancement",
+                "Regeneration"
+            ],
+            "species": "Galvanic Mechamorph",
+            "home_world": "Galvan B (moon of Galvan Prime)",
+            "body_type": "Liquid metallic humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "4",
+                "episode_name": "Permanent Retirement"
+            },
+            "color_scheme": [
+                "black",
+                "green",
+                "white"
+            ],
+            "height": "6 feet (variable)",
+            "stats": {
+                "Strength": 40,
+                "Speed": 50,
+                "Intelligence": 85,
+                "Control": 90
+            },
+            "about": "A versatile Galvanic Mechamorph from Galvan B, Upgrade merges with tech to enhance or reshape it."
+        },
+        {
+            "name": "Ghostfreak",
+            "abilities": [
+                "Invisibility",
+                "Intangibility",
+                "Possession",
+                "Tentacle attacks"
+            ],
+            "species": "Ectonurite",
+            "home_world": "Anur Phaetos",
+            "body_type": "Ghost-like humanoid with one eye",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "5",
+                "episode_name": "Hunted"
+            },
+            "color_scheme": [
+                "grey",
+                "white",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 60,
+                "Intelligence": 60,
+                "Control": 70
+            },
+            "about": "A spectral Ectonurite from Anur Phaetos, Ghostfreak haunts with intangibility and possession powers."
+        },
+        {
+            "name": "Cannonbolt",
+            "abilities": [
+                "Rolling into a ball",
+                "Super durability",
+                "Enhanced strength",
+                "Ricochet attacks"
+            ],
+            "species": "Arburian Pelarota",
+            "home_world": "Arburia",
+            "body_type": "Armadillo-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "8",
+                "episode_name": "The Big Tick"
+            },
+            "color_scheme": [
+                "white",
+                "yellow",
+                "black"
+            ],
+            "height": "5 feet",
+            "stats": {
+                "Strength": 70,
+                "Speed": 60,
+                "Intelligence": 30,
+                "Control": 80
+            },
+            "about": "A tough Arburian Pelarota from Arburia, Cannonbolt rolls into a ball to smash through obstacles."
+        },
+        {
+            "name": "Wildvine",
+            "abilities": [
+                "Plant manipulation",
+                "Vine generation",
+                "Regeneration",
+                "Explosive seeds"
+            ],
+            "species": "Florauna",
+            "home_world": "Flors Verdance",
+            "body_type": "Plant-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "15",
+                "episode_name": "Camp Fear"
+            },
+            "color_scheme": [
+                "green",
+                "brown",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 40,
+                "Intelligence": 40,
+                "Control": 85
+            },
+            "about": "A plant-based Florauna from Flors Verdance, Wildvine ensnares foes with vines and regenerates damage."
+        },
+        {
+            "name": "Spitter",
+            "abilities": [
+                "Slime spitting",
+                "Inflatable body",
+                "Enhanced strength"
+            ],
+            "species": "Spheroid",
+            "home_world": "Scalpasc",
+            "body_type": "Bloated reptilian humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "Special",
+                "episode_name": "Ben 10: Secret of the Omnitrix"
+            },
+            "color_scheme": [
+                "green",
+                "purple",
+                "black"
+            ],
+            "height": "5 feet",
+            "stats": {
+                "Strength": 65,
+                "Speed": 40,
+                "Intelligence": 30,
+                "Control": 70
+            },
+            "about": "A Spheroid from Scalpasc, Spitter inflates to spit powerful slime streams at enemies."
+        },
+        {
+            "name": "Buzzshock",
+            "abilities": [
+                "Electricity generation",
+                "Flight",
+                "Duplication when shocked",
+                "Small size"
+            ],
+            "species": "Nosedeenian (Megawatt)",
+            "home_world": "Nosedeen Quasar",
+            "body_type": "Tiny battery-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "34",
+                "episode_name": "Ben 10 vs. the Negative 10: Part 1"
+            },
+            "color_scheme": [
+                "black",
+                "yellow",
+                "white"
+            ],
+            "height": "1 foot",
+            "stats": {
+                "Strength": 30,
+                "Speed": 70,
+                "Intelligence": 50,
+                "Control": 60
+            },
+            "about": "A tiny Nosedeenian from Nosedeen Quasar, Buzzshock zaps with electricity and multiplies when charged."
+        },
+        {
+            "name": "Arctiguana",
+            "abilities": [
+                "Ice breath",
+                "Cold resistance",
+                "Enhanced agility"
+            ],
+            "species": "Polar Manzardill",
+            "home_world": "X’Nelli",
+            "body_type": "Lizard-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "Special",
+                "episode_name": "Ben 10: Secret of the Omnitrix"
+            },
+            "color_scheme": [
+                "blue",
+                "white",
+                "black"
+            ],
+            "height": "5 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 60,
+                "Intelligence": 40,
+                "Control": 75
+            },
+            "about": "A chilly Polar Manzardill from X’Nelli, Arctiguana freezes foes with icy breath and thrives in cold."
+        },
+        {
+            "name": "Blitzwolfer",
+            "abilities": [
+                "Sonic howls",
+                "Super strength",
+                "Enhanced senses",
+                "Claws and fangs"
+            ],
+            "species": "Loboan",
+            "home_world": "Luna Lobo (moon of Anur Transyl)",
+            "body_type": "Werewolf-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "31",
+                "episode_name": "Benwolf"
+            },
+            "color_scheme": [
+                "grey",
+                "green",
+                "black"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 80,
+                "Speed": 65,
+                "Intelligence": 40,
+                "Control": 70
+            },
+            "about": "A Loboan from Luna Lobo, Blitzwolfer howls with sonic force and tears into enemies with claws."
+        },
+        {
+            "name": "Perk Upchuck",
+            "abilities": [
+                "Explosive vomit",
+                "Energy consumption",
+                "Stretchable tongues",
+                "Enhanced durability"
+            ],
+            "species": "Perk Gourmand",
+            "home_world": "Peptos XI",
+            "body_type": "Small frog-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "27",
+                "episode_name": "The Visitor"
+            },
+            "color_scheme": [
+                "green",
+                "yellow",
+                "black"
+            ],
+            "height": "3 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 40,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A Perk Gourmand from Peptos XI, Perk Upchuck eats anything and spits explosive energy balls."
+        },
+        {
+            "name": "Murk Upchuck",
+            "abilities": [
+                "Explosive vomit",
+                "Energy consumption",
+                "Stretchable tongues",
+                "Enhanced durability"
+            ],
+            "species": "Murk Gourmand",
+            "home_world": "Peptos XI",
+            "body_type": "Small frog-like humanoid with darker coloration",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "4",
+                "episode_name": "Trouble Helix"
+            },
+            "color_scheme": [
+                "dark green",
+                "black",
+                "white"
+            ],
+            "height": "3 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 40,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A darker Murk Gourmand from Peptos XI, Murk Upchuck devours and regurgitates energy with precision."
+        },
+        {
+            "name": "Snare-oh",
+            "abilities": [
+                "Bandage manipulation",
+                "Shape-shifting",
+                "Regeneration",
+                "Enhanced strength"
+            ],
+            "species": "Thep Khufan",
+            "home_world": "Anur Khufos",
+            "body_type": "Mummy-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "32",
+                "episode_name": "The Return"
+            },
+            "color_scheme": [
+                "tan",
+                "brown",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 50,
+                "Intelligence": 50,
+                "Control": 85
+            },
+            "about": "A Thep Khufan from Anur Khufos, Snare-oh wraps enemies in bandages and regenerates effortlessly."
+        },
+        {
+            "name": "Frankenstrike",
+            "abilities": [
+                "Electricity generation",
+                "Super strength",
+                "Enhanced durability",
+                "Electromagnetic manipulation"
+            ],
+            "species": "Transylian",
+            "home_world": "Anur Transyl",
+            "body_type": "Frankenstein-like humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "32",
+                "episode_name": "The Return"
+            },
+            "color_scheme": [
+                "grey",
+                "green",
+                "black"
+            ],
+            "height": "8 feet",
+            "stats": {
+                "Strength": 85,
+                "Speed": 40,
+                "Intelligence": 50,
+                "Control": 75
+            },
+            "about": "A Transylian from Anur Transyl, Frankenstrike channels electricity and brute force in combat."
+        },
+        {
+            "name": "Eye Guy",
+            "abilities": [
+                "Multiple eye-based energy blasts",
+                "360-degree vision",
+                "Enhanced agility"
+            ],
+            "species": "Opticoid",
+            "home_world": "Sightra",
+            "body_type": "Humanoid covered in eyes",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "Special",
+                "episode_name": "Ben 10: Secret of the Omnitrix"
+            },
+            "color_scheme": [
+                "yellow",
+                "orange",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 60,
+                "Intelligence": 40,
+                "Control": 70
+            },
+            "about": "An Opticoid from Sightra, Eye Guy blasts energy from his many eyes with all-around vision."
+        },
+        {
+            "name": "Way Big",
+            "abilities": [
+                "Gigantic size",
+                "Super strength",
+                "Cosmic rays",
+                "Enhanced durability"
+            ],
+            "species": "To’kustar",
+            "home_world": "Cosmic Storms (born in space)",
+            "body_type": "Massive humanoid",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "Special",
+                "episode_name": "Ben 10: Secret of the Omnitrix"
+            },
+            "color_scheme": [
+                "white",
+                "red",
+                "blue"
+            ],
+            "height": "200 feet",
+            "stats": {
+                "Strength": 95,
+                "Speed": 30,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A colossal To’kustar born in cosmic storms, Way Big crushes foes with sheer size and cosmic power."
+        },
+        {
+            "name": "Ditto",
+            "abilities": [
+                "Self-duplication",
+                "Enhanced agility",
+                "Small size"
+            ],
+            "species": "Splixson",
+            "home_world": "Hathor",
+            "body_type": "Small humanoid with fins",
+            "first_appearance": {
+                "series": "OS",
+                "episode_number": "25",
+                "episode_name": "Divided We Stand"
+            },
+            "color_scheme": [
+                "white",
+                "black",
+                "green"
+            ],
+            "height": "3 feet",
+            "stats": {
+                "Strength": 40,
+                "Speed": 60,
+                "Intelligence": 40,
+                "Control": 70
+            },
+            "about": "A playful Splixson from Hathor, Ditto multiplies himself to outnumber and outmaneuver opponents."
+        },
+        {
+            "name": "Swampfire",
+            "abilities": [
+                "Pyrokinesis",
+                "Plant manipulation",
+                "Regeneration",
+                "Methane gas"
+            ],
+            "species": "Methanosian",
+            "home_world": "Methanos",
+            "body_type": "Plant-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "1",
+                "episode_name": "Ben 10 Returns: Part 1"
+            },
+            "color_scheme": [
+                "green",
+                "red",
+                "black"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 70,
+                "Speed": 50,
+                "Intelligence": 50,
+                "Control": 85
+            },
+            "about": "A Methanosian from Methanos, Swampfire blends fire and plant powers with a knack for regeneration."
+        },
+        {
+            "name": "Echo Echo",
+            "abilities": [
+                "Sonic screams",
+                "Self-duplication",
+                "Wall of sound",
+                "Small size"
+            ],
+            "species": "Sonorosian",
+            "home_world": "Sonorosia",
+            "body_type": "Small silicon-based humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "1",
+                "episode_name": "Ben 10 Returns: Part 1"
+            },
+            "color_scheme": [
+                "white",
+                "blue",
+                "black"
+            ],
+            "height": "2 feet",
+            "stats": {
+                "Strength": 40,
+                "Speed": 60,
+                "Intelligence": 50,
+                "Control": 80
+            },
+            "about": "A Sonorosian from Sonorosia, Echo Echo uses sonic screams and duplication to overwhelm enemies."
+        },
+        {
+            "name": "Humungousaur",
+            "abilities": [
+                "Super strength",
+                "Size increase",
+                "Enhanced durability",
+                "Tail mace"
+            ],
+            "species": "Vaxasaurian",
+            "home_world": "Terradino",
+            "body_type": "Dinosaur-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "1",
+                "episode_name": "Ben 10 Returns: Part 1"
+            },
+            "color_scheme": [
+                "brown",
+                "tan",
+                "green"
+            ],
+            "height": "12 feet (up to 60 feet when enlarged)",
+            "stats": {
+                "Strength": 90,
+                "Speed": 40,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A mighty Vaxasaurian from Terradino, Humungousaur grows massive to crush foes with raw power."
+        },
+        {
+            "name": "Jetray",
+            "abilities": [
+                "Flight",
+                "Super speed",
+                "Neuroshock blasts",
+                "Underwater breathing"
+            ],
+            "species": "Aerophibian",
+            "home_world": "Aeropela",
+            "body_type": "Manta ray-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "1",
+                "episode_name": "Ben 10 Returns: Part 1"
+            },
+            "color_scheme": [
+                "red",
+                "yellow",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 90,
+                "Intelligence": 40,
+                "Control": 85
+            },
+            "about": "An Aerophibian from Aeropela, Jetray soars at high speeds and stuns with neuroshock blasts."
+        },
+        {
+            "name": "Big Chill",
+            "abilities": [
+                "Ice breath",
+                "Flight",
+                "Intangibility",
+                "Cold resistance"
+            ],
+            "species": "Necrofriggian",
+            "home_world": "Kylmyys",
+            "body_type": "Moth-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "2",
+                "episode_name": "Ben 10 Returns: Part 2"
+            },
+            "color_scheme": [
+                "blue",
+                "black",
+                "white"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 70,
+                "Intelligence": 50,
+                "Control": 80
+            },
+            "about": "A Necrofriggian from Kylmyys, Big Chill freezes foes with icy breath and phases through obstacles."
+        },
+        {
+            "name": "Chromastone",
+            "abilities": [
+                "Energy absorption",
+                "Light generation",
+                "Super strength",
+                "Flight"
+            ],
+            "species": "Crystalsapien",
+            "home_world": "Petropia (rebuilt)",
+            "body_type": "Crystalline humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "5",
+                "episode_name": "All That Glitters"
+            },
+            "color_scheme": [
+                "purple",
+                "pink",
+                "black"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 75,
+                "Speed": 50,
+                "Intelligence": 50,
+                "Control": 85
+            },
+            "about": "A Crystalsapien from Petropia, Chromastone absorbs energy and unleashes it as powerful light."
+        },
+        {
+            "name": "Brainstorm",
+            "abilities": [
+                "High intelligence",
+                "Electricity generation",
+                "Telekinesis",
+                "Force fields"
+            ],
+            "species": "Cerebrocrustacean",
+            "home_world": "Encephalonus IV",
+            "body_type": "Crab-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "6",
+                "episode_name": "Pier Pressure"
+            },
+            "color_scheme": [
+                "orange",
+                "yellow",
+                "black"
+            ],
+            "height": "5 feet",
+            "stats": {
+                "Strength": 40,
+                "Speed": 40,
+                "Intelligence": 90,
+                "Control": 80
+            },
+            "about": "A Cerebrocrustacean from Encephalonus IV, Brainstorm shocks with intellect and electric powers."
+        },
+        {
+            "name": "Spidermonkey",
+            "abilities": [
+                "Web generation",
+                "Enhanced agility",
+                "Super strength",
+                "Wall climbing"
+            ],
+            "species": "Arachnichimp",
+            "home_world": "Aranhascimmia",
+            "body_type": "Monkey-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "3",
+                "episode_name": "Everybody Talks About the Weather"
+            },
+            "color_scheme": [
+                "blue",
+                "black",
+                "white"
+            ],
+            "height": "5 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 75,
+                "Intelligence": 40,
+                "Control": 70
+            },
+            "about": "An Arachnichimp from Aranhascimmia, Spidermonkey swings and traps foes with agile webbing."
+        },
+        {
+            "name": "Goop",
+            "abilities": [
+                "Shape-shifting",
+                "Acid generation",
+                "Regeneration",
+                "Flight (via anti-gravity projector)"
+            ],
+            "species": "Polymorph",
+            "home_world": "Viscosia",
+            "body_type": "Slime-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "4",
+                "episode_name": "The Gauntlet"
+            },
+            "color_scheme": [
+                "green",
+                "black"
+            ],
+            "height": "6 feet (variable)",
+            "stats": {
+                "Strength": 40,
+                "Speed": 50,
+                "Intelligence": 50,
+                "Control": 90
+            },
+            "about": "A Polymorph from Viscosia, Goop morphs and melts through anything with acidic slime."
+        },
+        {
+            "name": "Alien X",
+            "abilities": [
+                "Omnipotence",
+                "Reality manipulation",
+                "Invulnerability",
+                "Requires consensus of internal personalities"
+            ],
+            "species": "Celestialsapien",
+            "home_world": "Forge of Creation",
+            "body_type": "Humanoid with starry appearance",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "13",
+                "episode_name": "X = Ben + 2"
+            },
+            "color_scheme": [
+                "black",
+                "white",
+                "green"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 100,
+                "Speed": 100,
+                "Intelligence": 100,
+                "Control": 20
+            },
+            "about": "A Celestialsapien from the Forge of Creation, Alien X wields ultimate power, limited by internal debate."
+        },
+        {
+            "name": "Lodestar",
+            "abilities": [
+                "Magnetism manipulation",
+                "Magnetic force fields",
+                "Regeneration",
+                "Flight"
+            ],
+            "species": "Biosovortian",
+            "home_world": "Unknown (magnetic planet)",
+            "body_type": "Metallic humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "25",
+                "episode_name": "War of the Worlds: Part 1"
+            },
+            "color_scheme": [
+                "yellow",
+                "black",
+                "white"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 50,
+                "Intelligence": 50,
+                "Control": 85
+            },
+            "about": "A Biosovortian from a magnetic world, Lodestar controls metal with magnetic might."
+        },
+        {
+            "name": "Rath",
+            "abilities": [
+                "Super strength",
+                "Enhanced agility",
+                "Sharp claws",
+                "Aggressive instincts"
+            ],
+            "species": "Appoplexian",
+            "home_world": "Appoplexia",
+            "body_type": "Tiger-like humanoid",
+            "first_appearance": {
+                "series": "AF",
+                "episode_number": "32",
+                "episode_name": "Con of Rath"
+            },
+            "color_scheme": [
+                "orange",
+                "black",
+                "white"
+            ],
+            "height": "9 feet",
+            "stats": {
+                "Strength": 85,
+                "Speed": 70,
+                "Intelligence": 20,
+                "Control": 50
+            },
+            "about": "A fierce Appoplexian from Appoplexia, Rath rages into battle with claws and raw power."
+        },
+        {
+            "name": "Nanomech",
+            "abilities": [
+                "Microscopic size",
+                "Flight",
+                "Energy blasts",
+                "Adaptability"
+            ],
+            "species": "Human/Nanochip hybrid",
+            "home_world": "Earth (artificially created)",
+            "body_type": "Tiny insectoid humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "1",
+                "episode_name": "Fame"
+            },
+            "color_scheme": [
+                "grey",
+                "green",
+                "black"
+            ],
+            "height": "1 inch",
+            "stats": {
+                "Strength": 20,
+                "Speed": 70,
+                "Intelligence": 60,
+                "Control": 80
+            },
+            "about": "A hybrid from Earth, Nanomech shrinks to microscopic size to infiltrate and zap foes."
+        },
+        {
+            "name": "Water Hazard",
+            "abilities": [
+                "Water projection",
+                "Enhanced durability",
+                "Underwater breathing",
+                "Moisture absorption"
+            ],
+            "species": "Orishan",
+            "home_world": "Unknown (Andromeda Galaxy)",
+            "body_type": "Armored humanoid with water vents",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "2",
+                "episode_name": "Fame"
+            },
+            "color_scheme": [
+                "red",
+                "black",
+                "gold"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 70,
+                "Speed": 50,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "An Orishan from the Andromeda Galaxy, Water Hazard blasts water and thrives in aquatic combat."
+        },
+        {
+            "name": "Ampfibian",
+            "abilities": [
+                "Electricity generation",
+                "Intangibility",
+                "Flight",
+                "Mind reading (via electricity)"
+            ],
+            "species": "Amperi",
+            "home_world": "Unknown (Andromeda Galaxy)",
+            "body_type": "Jellyfish-like humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "3",
+                "episode_name": "Fused"
+            },
+            "color_scheme": [
+                "blue",
+                "white",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 40,
+                "Speed": 70,
+                "Intelligence": 60,
+                "Control": 85
+            },
+            "about": "An Amperi from the Andromeda Galaxy, Ampfibian shocks and phases with electric finesse."
+        },
+        {
+            "name": "Armodrillo",
+            "abilities": [
+                "Super strength",
+                "Drill arms",
+                "Earthquake generation",
+                "Enhanced durability"
+            ],
+            "species": "Talpaedan",
+            "home_world": "Terraexcava (Andromeda Galaxy)",
+            "body_type": "Armadillo-like humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "4",
+                "episode_name": "Hero Time"
+            },
+            "color_scheme": [
+                "yellow",
+                "grey",
+                "black"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 85,
+                "Speed": 40,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A Talpaedan from Terraexcava, Armodrillo drills through earth and shakes the ground with power."
+        },
+        {
+            "name": "Terraspin",
+            "abilities": [
+                "Wind generation",
+                "Flight",
+                "Super durability",
+                "Turtle shell defense"
+            ],
+            "species": "Geochelone Aerio",
+            "home_world": "Aldabra (Andromeda Galaxy)",
+            "body_type": "Turtle-like humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "5",
+                "episode_name": "Escape from Aggregor"
+            },
+            "color_scheme": [
+                "green",
+                "brown",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 50,
+                "Intelligence": 40,
+                "Control": 85
+            },
+            "about": "A Geochelone Aerio from Aldabra, Terraspin spins to create wind and shield with his shell."
+        },
+        {
+            "name": "NRG",
+            "abilities": [
+                "Radiation generation",
+                "Heat projection",
+                "Super durability",
+                "Energy containment suit"
+            ],
+            "species": "Prypiatosian-B",
+            "home_world": "Unknown (Andromeda Galaxy)",
+            "body_type": "Humanoid in a containment suit",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "6",
+                "episode_name": "Too Hot to Handle"
+            },
+            "color_scheme": [
+                "silver",
+                "red",
+                "black"
+            ],
+            "height": "7 feet (in suit)",
+            "stats": {
+                "Strength": 70,
+                "Speed": 40,
+                "Intelligence": 50,
+                "Control": 75
+            },
+            "about": "A Prypiatosian-B from the Andromeda Galaxy, NRG radiates heat and power from his armored suit."
+        },
+        {
+            "name": "Fasttrack",
+            "abilities": [
+                "Super speed",
+                "Enhanced strength",
+                "Agility",
+                "Friction resistance"
+            ],
+            "species": "Citrakayah",
+            "home_world": "Chalybeas",
+            "body_type": "Feline humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "12",
+                "episode_name": "Basic Training"
+            },
+            "color_scheme": [
+                "blue",
+                "black",
+                "green"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 90,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A Citrakayah from Chalybeas, Fasttrack dashes with feline speed and strength."
+        },
+        {
+            "name": "Clockwork",
+            "abilities": [
+                "Time manipulation",
+                "Time rays",
+                "Super durability",
+                "Enhanced strength"
+            ],
+            "species": "Chronosapien",
+            "home_world": "Unknown",
+            "body_type": "Robotic humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "16",
+                "episode_name": "The Forge of Creation"
+            },
+            "color_scheme": [
+                "bronze",
+                "black",
+                "red"
+            ],
+            "height": "8 feet",
+            "stats": {
+                "Strength": 70,
+                "Speed": 30,
+                "Intelligence": 70,
+                "Control": 85
+            },
+            "about": "A Chronosapien of unknown origin, Clockwork bends time with mechanical precision."
+        },
+        {
+            "name": "Chamalien",
+            "abilities": [
+                "Invisibility",
+                "Enhanced agility",
+                "Wall climbing",
+                "Tail stinger"
+            ],
+            "species": "Merlinisapien",
+            "home_world": "Unknown",
+            "body_type": "Chameleon-like humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "18",
+                "episode_name": "Prisoner #775 is Missing"
+            },
+            "color_scheme": [
+                "purple",
+                "grey",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 70,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A stealthy Merlinisapien, Chamalien vanishes and strikes with a chameleon’s cunning."
+        },
+        {
+            "name": "Eatle",
+            "abilities": [
+                "Solid matter consumption",
+                "Energy beam projection",
+                "Super strength",
+                "Enhanced durability"
+            ],
+            "species": "Oryctini",
+            "home_world": "Coleop Terra",
+            "body_type": "Beetle-like humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "19",
+                "episode_name": "A Knight to Remember"
+            },
+            "color_scheme": [
+                "black",
+                "green",
+                "grey"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 80,
+                "Speed": 40,
+                "Intelligence": 40,
+                "Control": 75
+            },
+            "about": "An Oryctini from Coleop Terra, Eatle devours matter to fire powerful energy beams."
+        },
+        {
+            "name": "Juryrigg",
+            "abilities": [
+                "Technological disassembly",
+                "Fast construction",
+                "Small size",
+                "Enhanced agility"
+            ],
+            "species": "Planchaküle",
+            "home_world": "Unknown",
+            "body_type": "Gremlin-like humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "23",
+                "episode_name": "The Eggman Cometh"
+            },
+            "color_scheme": [
+                "red",
+                "brown",
+                "black"
+            ],
+            "height": "2 feet",
+            "stats": {
+                "Strength": 30,
+                "Speed": 70,
+                "Intelligence": 80,
+                "Control": 60
+            },
+            "about": "A Planchaküle gremlin, Juryrigg breaks and builds tech with chaotic brilliance."
+        },
+        {
+            "name": "Shocksquatch",
+            "abilities": [
+                "Electricity generation",
+                "Super strength",
+                "Enhanced agility",
+                "Cold resistance"
+            ],
+            "species": "Gimlinopithecus",
+            "home_world": "Pattersonea",
+            "body_type": "Yeti-like humanoid",
+            "first_appearance": {
+                "series": "UA",
+                "episode_number": "Special",
+                "episode_name": "Ben 10/Generator Rex: Heroes United"
+            },
+            "color_scheme": [
+                "yellow",
+                "white",
+                "black"
+            ],
+            "height": "8 feet",
+            "stats": {
+                "Strength": 80,
+                "Speed": 60,
+                "Intelligence": 40,
+                "Control": 75
+            },
+            "about": "A Gimlinopithecus from Pattersonea, Shocksquatch electrifies and smashes with yeti-like might."
+        },
+        {
+            "name": "Feedback",
+            "abilities": [
+                "Energy absorption",
+                "Energy redirection",
+                "Enhanced agility",
+                "Tendril attacks"
+            ],
+            "species": "Conductoid",
+            "home_world": "Teslavorr",
+            "body_type": "Humanoid with plug-like tendrils",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "1",
+                "episode_name": "The More Things Change: Part 1"
+            },
+            "color_scheme": [
+                "black",
+                "yellow",
+                "white"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 70,
+                "Intelligence": 50,
+                "Control": 85
+            },
+            "about": "A Conductoid from Teslavorr, Feedback absorbs and redirects energy with tendril precision."
+        },
+        {
+            "name": "Bloxx",
+            "abilities": [
+                "Shape-shifting",
+                "Regeneration",
+                "Super durability",
+                "Building block structure"
+            ],
+            "species": "Segmentasapien",
+            "home_world": "Polyominus",
+            "body_type": "Gorilla-like humanoid made of blocks",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "1",
+                "episode_name": "The More Things Change: Part 1"
+            },
+            "color_scheme": [
+                "red",
+                "yellow",
+                "blue"
+            ],
+            "height": "7 feet (variable)",
+            "stats": {
+                "Strength": 70,
+                "Speed": 50,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A Segmentasapien from Polyominus, Bloxx reshapes his blocky body to build or bash."
+        },
+        {
+            "name": "Gravattack",
+            "abilities": [
+                "Gravity manipulation",
+                "Super durability",
+                "Enhanced strength",
+                "Orbit generation"
+            ],
+            "species": "Galilean",
+            "home_world": "Keplorr",
+            "body_type": "Planet-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "3",
+                "episode_name": "A Jolt from the Past"
+            },
+            "color_scheme": [
+                "red",
+                "brown",
+                "black"
+            ],
+            "height": "8 feet",
+            "stats": {
+                "Strength": 75,
+                "Speed": 30,
+                "Intelligence": 60,
+                "Control": 85
+            },
+            "about": "A Galilean from Keplorr, Gravattack bends gravity to control the battlefield."
+        },
+        {
+            "name": "Crashhopper",
+            "abilities": [
+                "Super jumping",
+                "Enhanced durability",
+                "Shockwave generation",
+                "Agility"
+            ],
+            "species": "Orthopterran",
+            "home_world": "Unknown",
+            "body_type": "Grasshopper-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "5",
+                "episode_name": "It Was Them"
+            },
+            "color_scheme": [
+                "green",
+                "black",
+                "yellow"
+            ],
+            "height": "5 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 80,
+                "Intelligence": 30,
+                "Control": 70
+            },
+            "about": "An Orthopterran, Crashhopper leaps with explosive force to crash into foes."
+        },
+        {
+            "name": "Ball Weevil",
+            "abilities": [
+                "Plasma ball generation",
+                "Web climbing",
+                "Small size",
+                "Explosive projectiles"
+            ],
+            "species": "Unknown",
+            "home_world": "Unknown",
+            "body_type": "Beetle-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "7",
+                "episode_name": "So Long, and Thanks for All the Smoothies"
+            },
+            "color_scheme": [
+                "green",
+                "red",
+                "black"
+            ],
+            "height": "1 foot",
+            "stats": {
+                "Strength": 30,
+                "Speed": 60,
+                "Intelligence": 50,
+                "Control": 80
+            },
+            "about": "A tiny beetle-like alien, Ball Weevil rolls plasma balls to detonate on impact."
+        },
+        {
+            "name": "Walkatrout",
+            "abilities": [
+                "Underwater breathing",
+                "Slippery body",
+                "Enhanced swimming"
+            ],
+            "species": "Ickthyperambuloid",
+            "home_world": "Gilli-Perambulous Promenade",
+            "body_type": "Fish-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "11",
+                "episode_name": "Outbreak"
+            },
+            "color_scheme": [
+                "blue",
+                "purple",
+                "black"
+            ],
+            "height": "2 feet",
+            "stats": {
+                "Strength": 20,
+                "Speed": 50,
+                "Intelligence": 30,
+                "Control": 60
+            },
+            "about": "An Ickthyperambuloid from Gilli-Perambulous Promenade, Walkatrout slips and swims with ease."
+        },
+        {
+            "name": "Pesky Dust",
+            "abilities": [
+                "Dream manipulation",
+                "Flight",
+                "Sleep dust",
+                "Small size"
+            ],
+            "species": "Nemuina",
+            "home_world": "Nemunimos IV",
+            "body_type": "Fairy-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "11",
+                "episode_name": "Outbreak"
+            },
+            "color_scheme": [
+                "blue",
+                "pink",
+                "black"
+            ],
+            "height": "1 foot",
+            "stats": {
+                "Strength": 10,
+                "Speed": 60,
+                "Intelligence": 60,
+                "Control": 80
+            },
+            "about": "A Nemuina from Nemunimos IV, Pesky Dust sprinkles sleep dust to manipulate dreams."
+        },
+        {
+            "name": "Mole-Stache",
+            "abilities": [
+                "Moustache manipulation",
+                "Enhanced digging",
+                "Small size"
+            ],
+            "species": "Unknown",
+            "home_world": "Unknown",
+            "body_type": "Mole-like humanoid with large mustache",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "11",
+                "episode_name": "Outbreak"
+            },
+            "color_scheme": [
+                "brown",
+                "tan",
+                "black"
+            ],
+            "height": "2 feet",
+            "stats": {
+                "Strength": 30,
+                "Speed": 50,
+                "Intelligence": 40,
+                "Control": 70
+            },
+            "about": "A mole-like alien, Mole-Stache uses his versatile mustache to dig and grapple."
+        },
+        {
+            "name": "The Worst",
+            "abilities": [
+                "Super durability",
+                "Pain resistance",
+                "No offensive abilities"
+            ],
+            "species": "Atrocian",
+            "home_world": "Unknown",
+            "body_type": "Blob-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "11",
+                "episode_name": "Outbreak"
+            },
+            "color_scheme": [
+                "yellow",
+                "orange",
+                "black"
+            ],
+            "height": "3 feet",
+            "stats": {
+                "Strength": 20,
+                "Speed": 20,
+                "Intelligence": 30,
+                "Control": 60
+            },
+            "about": "An Atrocian, The Worst endures pain and damage but lacks any real fighting prowess."
+        },
+        {
+            "name": "Kickin Hawk",
+            "abilities": [
+                "Enhanced strength",
+                "Powerful kicks",
+                "Agility",
+                "Sharp talons"
+            ],
+            "species": "Unknown",
+            "home_world": "Unknown",
+            "body_type": "Hawk-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "13",
+                "episode_name": "Store 23"
+            },
+            "color_scheme": [
+                "brown",
+                "blue",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 70,
+                "Speed": 70,
+                "Intelligence": 40,
+                "Control": 75
+            },
+            "about": "A hawk-like fighter, Kickin Hawk delivers swift, powerful kicks with avian precision."
+        },
+        {
+            "name": "Toepick",
+            "abilities": [
+                "Fear-inducing face",
+                "Enhanced durability",
+                "Nausea inducement"
+            ],
+            "species": "Unknown",
+            "home_world": "Unknown",
+            "body_type": "Ogre-like humanoid with helmet",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "17",
+                "episode_name": "Special Delivery"
+            },
+            "color_scheme": [
+                "green",
+                "grey",
+                "black"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 40,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "A grotesque alien, Toepick terrifies and sickens foes with his horrifying visage."
+        },
+        {
+            "name": "Astrodactyl",
+            "abilities": [
+                "Flight",
+                "Energy whips",
+                "Sonic screams",
+                "Enhanced strength"
+            ],
+            "species": "Unknown",
+            "home_world": "Terradino (possibly)",
+            "body_type": "Pterosaur-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "20",
+                "episode_name": "While You Were Away"
+            },
+            "color_scheme": [
+                "red",
+                "yellow",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 70,
+                "Intelligence": 40,
+                "Control": 75
+            },
+            "about": "A pterosaur-like alien, Astrodactyl soars and lashes out with energy whips and sonic roars."
+        },
+        {
+            "name": "Bullfrag",
+            "abilities": [
+                "Enhanced jumping",
+                "Long tongue",
+                "Super strength",
+                "Agility"
+            ],
+            "species": "Incursean",
+            "home_world": "Unknown",
+            "body_type": "Frog-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "25",
+                "episode_name": "The Frogs of War: Part 2"
+            },
+            "color_scheme": [
+                "green",
+                "black",
+                "white"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 70,
+                "Speed": 70,
+                "Intelligence": 40,
+                "Control": 80
+            },
+            "about": "An Incursean warrior, Bullfrag leaps and lashes with a frog’s strength and agility."
+        },
+        {
+            "name": "Atomix",
+            "abilities": [
+                "Nuclear energy blasts",
+                "Super strength",
+                "Flight",
+                "Enhanced durability"
+            ],
+            "species": "Unknown",
+            "home_world": "Unknown",
+            "body_type": "Robotic humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "33",
+                "episode_name": "For a Few Brains More"
+            },
+            "color_scheme": [
+                "white",
+                "green",
+                "black"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 85,
+                "Speed": 60,
+                "Intelligence": 60,
+                "Control": 85
+            },
+            "about": "A robotic powerhouse, Atomix unleashes nuclear energy and brute force in equal measure."
+        },
+        {
+            "name": "Gutrot",
+            "abilities": [
+                "Gas generation",
+                "Chemical manipulation",
+                "Enhanced intelligence"
+            ],
+            "species": "Unknown",
+            "home_world": "Unknown",
+            "body_type": "Humanoid with gas vents",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "37",
+                "episode_name": "Animo Crackers"
+            },
+            "color_scheme": [
+                "purple",
+                "grey",
+                "black"
+            ],
+            "height": "6 feet",
+            "stats": {
+                "Strength": 50,
+                "Speed": 40,
+                "Intelligence": 80,
+                "Control": 85
+            },
+            "about": "A chemical genius, Gutrot brews and releases potent gases to control the fight."
+        },
+        {
+            "name": "Whampire",
+            "abilities": [
+                "Flight",
+                "Hypnosis",
+                "Energy draining",
+                "Bat transformation"
+            ],
+            "species": "Vladat",
+            "home_world": "Anur Vladias",
+            "body_type": "Vampire-like humanoid",
+            "first_appearance": {
+                "series": "OV",
+                "episode_number": "41",
+                "episode_name": "The Vampire Strikes Back"
+            },
+            "color_scheme": [
+                "black",
+                "white",
+                "green"
+            ],
+            "height": "7 feet",
+            "stats": {
+                "Strength": 60,
+                "Speed": 70,
+                "Intelligence": 60,
+                "Control": 80
+            },
+            "about": "A Vladat from Anur Vladias, Whampire mesmerizes and drains energy with vampiric flair."
+        }
+    ]
+}
