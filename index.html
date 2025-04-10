@@ -11,6 +11,69 @@
 
 <body>
 
+    <!-- preloader section -->
+    <section id="preloader" class="relative w-full h-screen bg-black overflow-hidden">
+        <svg id="side-vector-1" class="absolute bottom-3 left-3 w-[70px] h-[23px] md:w-[118px] md:h-[37px]"
+            viewBox="0 0 118 37" fill="none">
+            <path d="M118 35.5 L 30.5 35.5 L 1 1" stroke="white" />
+        </svg>
+
+        <svg id="side-vector-2" class="absolute top-3 right-3 rotate-180 w-[70px] h-[23px] md:w-[118px] md:h-[37px]"
+            viewBox="0 0 118 37" fill="none">
+            <path d="M118 35.5 L 30.5 35.5 L 1 1" stroke="white" />
+        </svg>
+
+        <img id="omnitrix-logo" class="absolute bottom-3 right-3 opacity-0 w-0 md:w-10"
+            src="assets/images/omnitrix_logo.png">
+
+        <video id="intro-video" class="absolute opacity-0 z-[10] w-full h-full object-cover"
+            src="assets/videos/ben_10_af_intro.mp4" muted></video>
+
+        <button id="skip-intro" class="absolute z-[100] bottom-3 right-3 hidden opacity-0 px-3 py-2">
+            <svg class="w-10 h-7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 6V1M5 3.5L1 6V1L5 3.5ZM9 3.5L5 6V1L9 3.5Z" stroke="white" stroke-width=".3" />
+            </svg>
+        </button>
+
+        <!-- preloader main svg container -->
+        <div class="w-full h-full flex justify-center">
+            <div class="relative w-[64px] h-full">
+                <!-- preloader main vector(will go left) -->
+                <div id="main-vector-container-1" class="absolute top-0 left-0 w-full h-full">
+                    <svg id="main-vector-1" class="absolute" width="64" height="100%" stroke-width="1"
+                        viewBox="0 0 64 1117" fill="none">
+                        <path d="M63 1117V485L1 333V0" stroke="white" />
+                    </svg>
+
+                    <!-- main vector filling -->
+                    <svg id="main-vector-filling-1" class="absolute" width="64" height="100%" stroke-width="1"
+                        viewBox="0 0 64 1117" fill="none">
+                        <path d="M63 1117V485L1 333V0" stroke="#8CE308" />
+                    </svg>
+                </div>
+
+                <!-- preloader main vector(will go right) -->
+                <div id="main-vector-container-2" class="absolute top-0 left-0 w-full h-full">
+                    <svg id="main-vector-2" class="absolute" width="64" height="100%" stroke-width="1"
+                        viewBox="0 0 64 1117" fill="none">
+                        <path d="M63 1117V485L1 333V0" stroke="white" />
+                    </svg>
+
+                    <!-- main vector filling -->
+                    <svg id="main-vector-filling-2" class="absolute" width="64" height="100%" stroke-width="1"
+                        viewBox="0 0 64 1117" fill="none">
+                        <path d="M63 1117V485L1 333V0" stroke="#8CE308" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- main section -->
+    <main class="hidden relative w-full h-screen bg-white justify-center items-center">
+        <h1 class="font-[Gilroy] text-4xl">Project Ben 10</h1>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>
     <script src="script.js"></script>
 </body>
