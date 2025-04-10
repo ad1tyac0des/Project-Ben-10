@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Ben 10</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,6 +26,11 @@
 
         <img id="omnitrix-logo" class="absolute bottom-3 right-3 opacity-0 w-0 md:w-10"
             src="assets/images/omnitrix_logo.png">
+
+        <div id="info-text-container" class="absolute bottom-5 right-20 opacity-0">
+            <p id="info-text" class="font-[ibm-plex-mono-400] text-white text-sm uppercase">Press [<span
+                    class="px-1">Space</span>] to Enter</p>
+        </div>
 
         <video id="intro-video" class="absolute opacity-0 z-[10] w-full h-full object-cover"
             src="assets/videos/ben_10_af_intro.mp4" muted></video>

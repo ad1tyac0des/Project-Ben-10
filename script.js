@@ -77,7 +77,15 @@ function setupPreloaderAnimations() {
             }
         )
         .label("load-complete")
-        .call(() => tl.pause())
+        .call(() => {
+            tl.pause();
+            animate("#info-text-container", {
+                y: [10, 0],
+                opacity: [0, 1],
+                duration: 400,
+                ease: "inOutSine",
+            });
+        })
         .add("#main-vector-container-1", {
             x: ["0", "-100vw"],
             opacity: [1, 0],
@@ -120,6 +128,16 @@ function setupPreloaderAnimations() {
                 translateX: [0, -200],
                 opacity: [1, 0],
                 duration: 500,
+                ease: "inOutSine",
+            },
+            "<<"
+        )
+        .add(
+            "#info-text-container",
+            {
+                y: [0, 10],
+                opacity: [1, 0],
+                duration: 400,
                 ease: "inOutSine",
             },
             "<<"
@@ -217,6 +235,14 @@ function setupPreloaderAnimations() {
 
     document.addEventListener("keydown", (e) => {
         if (tl.paused && (e.code === "Space" || e.code === "Enter")) tl.resume();
+        if (e.code === "Space") {
+            animate("#info-text-container span", {
+                backgroundColor: ["#000", "#fff"],
+                color: ["#fff", "#000"],
+                duration: 10,
+                ease: "linear",
+            });
+        }
     });
 
     setupSkipIntroInteractions(tl);
@@ -235,7 +261,7 @@ function setupSkipIntroInteractions(tl) {
         });
     });
 
-    // skip intro click animation
+    // skips intro video and jumps to end
     skipIntro.addEventListener("click", () => {
         const introVideo = document.getElementById("intro-video");
         introVideo.pause();
