@@ -77,6 +77,7 @@ function setupPreloaderAnimations() {
             }
         )
         .label("load-complete")
+        .call(() => tl.pause())
         .add("#main-vector-container-1", {
             x: ["0", "-100vw"],
             opacity: [1, 0],
@@ -211,7 +212,12 @@ function setupPreloaderAnimations() {
             "<-=500"
         );
 
-    const loadCompleteLabelPosition = tl.labels["load-complete"];
+    // after load complete, resume timeline on click or space/enter keydown
+    document.addEventListener("click", () => tl.paused && tl.resume());
+
+    document.addEventListener("keydown", (e) => {
+        if (tl.paused && (e.code === "Space" || e.code === "Enter")) tl.resume();
+    });
 
     setupSkipIntroInteractions(tl);
     // return tl;
