@@ -156,6 +156,7 @@ function setupPreloaderAnimations() {
             },
             "<<+=800"
         )
+        .label("intro-video-start")
         .add(
             "#skip-intro",
             {
@@ -254,10 +255,10 @@ function setupPreloaderAnimations() {
 }
 
 function setupSkipIntroInteractions(tl) {
-    const skipIntro = document.querySelector("#skip-intro");
+    const skipIntroBtn = document.querySelector("#skip-intro");
 
-    // skip intro hover animation
-    skipIntro.addEventListener("mouseenter", () => {
+    // skip intro button hover animation
+    skipIntroBtn.addEventListener("mouseenter", () => {
         animate(svg.createDrawable("#skip-intro svg path"), {
             draw: ["0 0", "0 1"],
             duration: 2000,
@@ -266,13 +267,25 @@ function setupSkipIntroInteractions(tl) {
     });
 
     // skips intro video and jumps to end
-    skipIntro.addEventListener("click", () => {
+    function skipIntro() {
         const introVideo = document.getElementById("intro-video");
         introVideo.pause();
         introVideo.style.opacity = 0;
 
-        const labelPosition = tl.labels["intro-video-end"];
-        tl.seek(labelPosition);
+        const introVideoEndPosition = tl.labels["intro-video-end"];
+        tl.seek(introVideoEndPosition);
+    }
+
+    // call skipIntro function on clicking skip button
+    skipIntroBtn.addEventListener("click", () => skipIntro());
+
+    // call skipIntro function on pressing space button
+    document.addEventListener("keydown", (e) => {
+        if (e.code === "Space") {
+            const introVideoStartPosition = tl.labels["intro-video-start"];
+            // make sure we r on intro video page
+            if (tl.currentTime > introVideoStartPosition) skipIntro();
+        }
     });
 }
 
