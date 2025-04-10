@@ -216,7 +216,7 @@ function setupPreloaderAnimations() {
         .add(
             "main",
             {
-                display: "flex",
+                display: "block",
                 duration: 500,
             },
             "<"
