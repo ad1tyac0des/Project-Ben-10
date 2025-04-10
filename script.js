@@ -230,7 +230,7 @@ function setupPreloaderAnimations() {
             "<-=500"
         );
 
-    // after load complete, resume timeline on click or space/enter keydown
+    // after load complete, resume timeline on click or press space/enter button
     document.addEventListener("click", () => tl.paused && tl.resume());
 
     document.addEventListener("keydown", (e) => {
@@ -244,6 +244,10 @@ function setupPreloaderAnimations() {
             });
         }
     });
+
+    if (window.innerWidth <= 768) {
+        document.querySelector("#info-text").innerHTML = "Click to Enter";
+    }
 
     setupSkipIntroInteractions(tl);
     // return tl;
