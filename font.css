@@ -5,5 +5,10 @@
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: "inter";
+    src: url("assets/fonts/inter-variable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+}
 
