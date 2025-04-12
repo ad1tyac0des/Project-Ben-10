@@ -519,9 +519,6 @@ function setupParallaxEffect() {
     const heroImage3 = document.querySelector("#hero-image-3");
     const heroBg = document.querySelector("#hero-bg-container img");
     
-    // Prepare background image
-    heroBg.classList.add("parallax-bg");
-    
     // Get initial transforms
     const getInitialTransform = element => {
         const style = window.getComputedStyle(element);

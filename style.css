@@ -28,12 +28,6 @@
     }
 }
 
-.parallax-bg {
-    width: 105%;
-    height: 105%;
-    object-position: center;
-}
-
 .desktop-transition {
     transition: transform 0.2s ease-out;
 }
