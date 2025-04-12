@@ -24,7 +24,7 @@ function setupPreloaderAnimations() {
                 duration: 500,
                 ease: "inOutQuad",
             },
-            "<<"
+            "<<="
         )
         .add(
             svg.createDrawable("#side-vector-2 path"),
@@ -513,4 +513,115 @@ function setupHeroSectionImages() {
     }
 }
 
+function setupParallaxEffect() {
+    const heroImage1 = document.querySelector("#hero-image-1");
+    const heroImage2 = document.querySelector("#hero-image-2");
+    const heroImage3 = document.querySelector("#hero-image-3");
+    const heroBg = document.querySelector("#hero-bg-container img");
+    
+    // Prepare background image
+    heroBg.classList.add("parallax-bg");
+    
+    // Get initial transforms
+    const getInitialTransform = element => {
+        const style = window.getComputedStyle(element);
+        return style.transform !== 'none' ? style.transform : '';
+    };
+    
+    // Store initial transforms
+    const initialTransforms = {
+        heroImage1: getInitialTransform(heroImage1),
+        heroImage2: getInitialTransform(heroImage2),
+        heroImage3: getInitialTransform(heroImage3),
+        heroBg: getInitialTransform(heroBg)
+    };
+    
+    // Setup parallax elements
+    const parallaxElements = [
+        { element: heroImage1, factor: 0.015, mobileFactor: 0.55, transform: initialTransforms.heroImage1 },
+        { element: heroImage2, factor: 0.01, mobileFactor: 0.48, transform: initialTransforms.heroImage2 },
+        { element: heroImage3, factor: 0.02, mobileFactor: 0.42, transform: initialTransforms.heroImage3 },
+        { element: heroBg, factor: 0.03, mobileFactor: 0.45, transform: initialTransforms.heroBg }
+    ];
+    
+    let isMobile = window.innerWidth < 768;
+
+    // Apply appropriate 'transition' class to elements
+    function updateTransitionClasses() {
+        parallaxElements.forEach(({ element }) => {
+            element.classList.remove("desktop-transition", "mobile-transition");
+            element.classList.add(isMobile ? "mobile-transition" : "desktop-transition");
+        });
+    }
+    
+    // Move element based on cursor/tilt position
+    function moveElement(element, x, y, baseTransform) {
+        element.style.transform = `${baseTransform} translate3d(${x}px, ${y}px, 0)`;
+    }
+    
+    // Handle mouse movement on desktop
+    function handleMouseMove(event) {
+        if (isMobile) return;
+        
+        const mouseX = event.clientX - window.innerWidth / 2;
+        const mouseY = event.clientY - window.innerHeight / 2;
+        
+        parallaxElements.forEach(({ element, factor, transform }) => {
+            moveElement(element, mouseX * factor, mouseY * factor, transform);
+        });
+    }
+    
+    // Handle device tilt on mobile
+    function handleDeviceTilt(event) {
+        if (!isMobile || !event.beta || !event.gamma) return;
+        
+        // Limit tilt values
+        const tiltY = Math.min(Math.max(event.beta, -45), 45);
+        const tiltX = Math.min(Math.max(event.gamma, -45), 45);
+        
+        parallaxElements.forEach(({ element, mobileFactor, transform }) => {
+            moveElement(element, tiltX * mobileFactor, tiltY * mobileFactor, transform);
+        });
+    }
+    
+    // Request permission for device orientation on iOS
+    function requestTiltPermission() {
+        if (typeof DeviceOrientationEvent !== 'undefined' && 
+            typeof DeviceOrientationEvent.requestPermission === 'function') {
+            
+            DeviceOrientationEvent.requestPermission()
+                .then(response => {
+                    if (response === 'granted') {
+                        window.addEventListener('deviceorientation', handleDeviceTilt);
+                    }
+                })
+                .catch(console.error);
+        } else {
+            window.addEventListener('deviceorientation', handleDeviceTilt);
+        }
+    }
+    
+    // Initialize event listeners
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    // Handle mobile initialization
+    if (isMobile) {
+        document.addEventListener('touchstart', function initTilt() {
+            requestTiltPermission();
+            document.removeEventListener('touchstart', initTilt);
+        }, { once: true });
+    }
+    
+    // Update on window resize
+    window.addEventListener('resize', () => {
+        isMobile = window.innerWidth < 768;
+        updateTransitionClasses();
+    });
+    
+    // Set initial states
+    updateTransitionClasses();
+}
+
 setupHeroSectionImages();
+
+setupParallaxEffect();
