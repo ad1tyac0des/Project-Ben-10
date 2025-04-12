@@ -2,18 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Ben 10</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-
+<body class="relative bg-zinc-900">
     <!-- preloader section -->
-    <section id="preloader" class="relative w-full h-dvh bg-black overflow-hidden">
+    <section id="preloader" class="hidden relative w-full h-dvh bg-black overflow-hidden">
         <svg id="side-vector-1" class="absolute bottom-3 left-3 w-[70px] h-[23px] md:w-[118px] md:h-[37px]"
             viewBox="0 0 118 37" fill="none">
             <path d="M118 35.5 L 30.5 35.5 L 1 1" stroke="white" />
@@ -25,11 +24,12 @@
         </svg>
 
         <img id="omnitrix-logo" class="absolute bottom-3 right-3 opacity-0 w-0 md:w-10"
-            src="assets/images/omnitrix_logo.png">
+            src="assets/images/omnitrix_logo.png" />
 
         <div id="info-text-container" class="absolute bottom-5 right-4 md:right-20 opacity-0">
-            <p id="info-text" class="font-[ibm-plex-mono-400] text-white text-xs md:text-sm uppercase">Press [<span
-                    class="px-1">Space</span>] to Enter</p>
+            <p id="info-text" class="font-[ibm-plex-mono-400] text-white text-xs md:text-sm uppercase">
+                Press [<span class="px-1">Space</span>] to Enter
+            </p>
         </div>
 
         <video id="intro-video" class="absolute opacity-0 z-[10] w-full h-full object-cover"
@@ -76,8 +76,87 @@
     </section>
 
     <!-- main section -->
-    <main class="hidden relative w-full h-screen bg-white justify-center items-center">
-        <h1 class="font-[Gilroy] text-4xl">Project Ben 10</h1>
+    <main class="2xl:container 2xl:mx-auto min-h-screen px-4 md:px-10 2xl:px-0 bg-zinc-900">
+        <div id="hero-bg-container" class="absolute top-0 left-0 w-full h-screen">
+            <img src="assets/images/hero_bg.jpg" alt="hero-bg" class="w-full h-full object-cover opacity-40">
+        </div>
+        <section id="hero-section" class="w-full h-screen bg-zinc-900 flex flex-col">
+            <nav class="relative w-full flex items-center justify-between py-2 md:py-4">
+                <div id="logo-container" class="w-16 md:w-20 aspect-square">
+                    <img class="w-full h-full object-contain" src="assets/images/ben10_logo.png" alt="logo" />
+                </div>
+
+                <div id="nav-links-container"
+                    class="hidden xl:flex items-center gap-20 2xl:gap-24 font-[inter] font-normal uppercase text-sm">
+                    <a class="text-white" href="#">Home</a>
+                    <a class="text-zinc-500" href="#">Heroes</a>
+                    <a class="text-zinc-500" href="#">Series</a>
+                    <a class="text-zinc-500" href="#">Chronology</a>
+                    <a class="text-zinc-500" href="#">Forum</a>
+                    <a class="text-zinc-500" href="#">Fan Art</a>
+                </div>
+
+                <div id="buttons-container" class="absolute right-20 xl:static xl:right-0 flex items-center gap-8">
+                    <!-- Audio Button -->
+                    <button id="audio-button" class="flex items-center space-x-1 px-2 py-3 outline-none">
+                        <audio id="audio-element" class="hidden" src="assets/audio/bgm.mp3" loop></audio>
+                        <div class="indicator-line" style="--animation-order: 2"></div>
+                        <div class="indicator-line" style="--animation-order: 4"></div>
+                        <div class="indicator-line" style="--animation-order: 6"></div>
+                        <div class="indicator-line" style="--animation-order: 8"></div>
+                        <div class="indicator-line" style="--animation-order: 10"></div>
+                    </button>
+
+                    <!-- Sign In Button -->
+                    <div class="hidden xl:block relative w-[149.5px] h-[43.5px] cursor-pointer">
+                        <svg class="absolute w-full h-full" viewBox="0 0 178 56" fill="none">
+                            <path d="M161 56H1V2H175V30" stroke="white" />
+                        </svg>
+                        <p
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-[inter] font-normal uppercase text-xl">
+                            Sign In
+                        </p>
+                    </div>
+                </div>
+
+                <div id="hamburger-menu-container" class="block xl:hidden">
+                    <div id="hamburger-menu"
+                        class="w-12 h-10 md:w-16 md:h-12 flex flex-col justify-center items-center gap-2.5 cursor-pointer">
+                        <div id="hamburger-line-1-container" class="w-[60%] h-px relative">
+                            <div id="hamburger-line-1" class="w-full h-full bg-white"></div>
+                        </div>
+                        <div id="hamburger-line-2-container" class="w-[60%] h-px relative">
+                            <div id="hamburger-line-2" class="w-full h-full bg-white absolute top-0 right-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="hero-section-content-container" class="relative w-full flex-1">
+                <div id="hero-section-content-text-container" class="w-full flex flex-col gap-2 md:gap-4 items-center justify-center mt-36">
+                    <h3 class="font-[lexend] font-extrabold text-5xl md:text-7xl uppercase text-white">Its</h3>
+                    <div class="flex flex-col md:flex-row items-center gap-0 md:gap-10">
+                        <h1 class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl uppercase text-white">Hero</h1>
+                        <h1 class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl tracking-wider md:tracking-normal uppercase text-white">Time</h1>
+                    </div>
+                </div>
+
+                <div id="hero-section-content-image-container" class="absolute top-0 left-0 w-full h-full flex items-end justify-center">
+                    <div id="hero-image-1" class="w-auto h-[31rem] md:h-auto md:w-56 mb-16 md:mb-1 translate-x-3 md:translate-x-24">
+                        <img src="assets/images/ben_af.png" alt="hero-image" class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                    </div>
+
+                    <div id="hero-image-2" class="w-auto h-[28rem] md:h-auto md:w-[19.5rem] mb-16 md:mb-1">
+                        <img src="assets/images/ben_os.png" alt="hero-image" class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                    </div>
+
+                    <div id="hero-image-3" class="w-auto h-[31rem] md:h-auto md:w-[10.75rem] mb-16 md:mb-1 -translate-x-3 md:-translate-x-24">
+                        <img src="assets/images/ben_ov.png" alt="hero-image" class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                    </div>
+                </div>
+            </div>
+                
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>

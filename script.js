@@ -289,4 +289,228 @@ function setupSkipIntroInteractions(tl) {
     });
 }
 
-setupPreloaderAnimations();
+// setupPreloaderAnimations();
+
+function setupHamburgerMenu() {
+    const hamburger = document.querySelector("#hamburger-menu");
+    const lineGap = window.getComputedStyle(hamburger).getPropertyValue("gap");
+    let isOpen = false;
+
+    //hamburger menu animation
+    function toggleHamburgerMenuAnimation() {
+        const tl = createTimeline();
+
+        tl.add("#hamburger-line-1", {
+            width: ["100%", "0%"],
+            duration: 400,
+            ease: "linear",
+        })
+            .add(
+                "#hamburger-line-2",
+                {
+                    width: ["100%", "0%"],
+                    duration: 400,
+                    ease: "linear",
+                },
+                "<<"
+            )
+            .add(
+                hamburger,
+                {
+                    gap: isOpen ? ["0px", lineGap] : [lineGap, "0px"],
+                    duration: 10,
+                    ease: "linear",
+                },
+                "<+=200"
+            )
+            .add(
+                "#hamburger-line-1-container",
+                {
+                    rotate: isOpen ? 0 : 45,
+                    duration: 10,
+                    ease: "linear",
+                },
+                "<<"
+            )
+            .add(
+                "#hamburger-line-2-container",
+                {
+                    rotate: isOpen ? 0 : -45,
+                    duration: 10,
+                    ease: "linear",
+                },
+                "<<"
+            )
+            .add(
+                "#hamburger-line-1",
+                {
+                    width: ["0%", "100%"],
+                    duration: 400,
+                    ease: "linear",
+                },
+                "<"
+            )
+            .add(
+                "#hamburger-line-2",
+                {
+                    width: ["0%", "100%"],
+                    duration: 400,
+                    ease: "linear",
+                },
+                "<<"
+            );
+
+        isOpen = !isOpen;
+    }
+
+    // toggle hamburger menu animation on click
+    hamburger.addEventListener("click", () => {
+        toggleHamburgerMenuAnimation();
+    });
+}
+setupHamburgerMenu();
+
+function setupAudioButton() {
+    let isAudioPlaying = false;
+    let isIndicatorActive = false;
+    let clickCount = 1;
+    let fadeIntervalRef = null;
+
+    const audioButton = document.getElementById("audio-button");
+    const audioElement = document.getElementById("audio-element");
+    const indicatorLines = document.querySelectorAll(".indicator-line");
+
+    // Main Function which plays the line animation and calls all the audio play/pause functions
+    function toggleAudioIndicator() {
+        isAudioPlaying = !isAudioPlaying;
+        isIndicatorActive = !isIndicatorActive;
+
+        // Indicator lines animation
+        indicatorLines.forEach((line) => {
+            if (isIndicatorActive) {
+                line.classList.add("active");
+            } else {
+                line.classList.remove("active");
+            }
+        });
+
+        // Play or pause audio with fade in/out
+        if (isAudioPlaying) {
+            fadeInAudio();
+        } else {
+            fadeOutAudio();
+        }
+    }
+
+    // Fade in audio function(plays the audio)
+    function fadeInAudio() {
+        if (!audioElement) return;
+
+        // [safety check] Clear existing fade interval (if any)
+        if (fadeIntervalRef) {
+            clearInterval(fadeIntervalRef);
+        }
+
+        // Play the audio(ensure volume is set to 0 first)
+        audioElement.volume = 0;
+        audioElement.play();
+
+        fadeIntervalRef = setInterval(() => {
+            if (audioElement.volume < 0.99) {
+                audioElement.volume = Math.min(audioElement.volume + 0.1, 1);
+            } else {
+                audioElement.volume = 1;
+                // After volume reached its max, stop the fadeInterval
+                clearInterval(fadeIntervalRef);
+                fadeIntervalRef = null;
+            }
+        }, 100);
+    }
+
+    // Fade out audio function(pauses the audio)
+    function fadeOutAudio() {
+        if (!audioElement) return;
+
+        if (fadeIntervalRef) {
+            clearInterval(fadeIntervalRef);
+        }
+
+        fadeIntervalRef = setInterval(() => {
+            if (audioElement.volume > 0.01) {
+                audioElement.volume = Math.max(audioElement.volume - 0.1, 0);
+            } else {
+                // Pause the audio(ensure volume is set to 0 first)
+                audioElement.volume = 0;
+                audioElement.pause();
+                // After audio is paused, stop the fadeInterval
+                clearInterval(fadeIntervalRef);
+                fadeIntervalRef = null;
+            }
+        }, 100);
+    }
+
+    // Play audio on first click(anywhere on the page)
+    document.addEventListener("click", (e) => {
+        if (e.target.id !== "audio-button" && clickCount === 1) {
+            isAudioPlaying = true;
+            isIndicatorActive = true;
+
+            indicatorLines.forEach((line) => {
+                line.classList.add("active");
+            });
+
+            fadeInAudio();
+        }
+        clickCount++;
+    });
+
+    // Play or pause audio on clicking audio btn
+    audioButton.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent document click from firing
+        toggleAudioIndicator();
+    });
+}
+setupAudioButton();
+
+function enterFullScreen() {
+    const elem = document.documentElement;
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { // Safari
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}
+
+function setupHeroSectionImages() {
+    const heroImage1 = document.querySelector("#hero-image-1");
+    const heroImage2 = document.querySelector("#hero-image-2");
+    const heroImage3 = document.querySelector("#hero-image-3");
+
+    let viewportHeight = window.innerHeight;
+    let viewportWidth = window.innerWidth;
+
+    window.addEventListener("resize", (e) => {
+        viewportHeight = e.target.innerHeight;
+        viewportWidth = e.target.innerWidth;
+    });
+
+    if (viewportHeight > 800) {
+        heroImage1.classList.replace("w-56", "w-60");
+        heroImage2.classList.replace("w-[19.5rem]", "w-[22rem]");
+        heroImage3.classList.replace("w-[10.75rem]", "w-[11.5rem]");
+        // heroImage1.classList.add("bg-red-500");
+    }
+
+    if (viewportWidth < 768) {
+        if (viewportHeight < 750) {
+            heroImage1.classList.replace("mb-16", "mb-0");
+            heroImage2.classList.replace("mb-16", "mb-0");
+            heroImage3.classList.replace("mb-16", "mb-0");
+        }
+    }
+}
+
+setupHeroSectionImages();
