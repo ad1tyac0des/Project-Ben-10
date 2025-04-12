@@ -35,3 +35,9 @@
 .mobile-transition {
     transition: transform 0.06s ease-out;
 }
+
+img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
