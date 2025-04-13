@@ -292,13 +292,31 @@ function setupSkipIntroInteractions(tl) {
 // setupPreloaderAnimations();
 
 function setupHamburgerMenu() {
+    const hamburgerMenuContainer = document.querySelector("#hamburger-menu-container");
+    const hamburgerPanelContainer = document.querySelector("#hamburger-panel-container");
     const hamburger = document.querySelector("#hamburger-menu");
     const lineGap = window.getComputedStyle(hamburger).getPropertyValue("gap");
     let isOpen = false;
 
+    const hamburgerMenuDims = hamburger.getBoundingClientRect();
+
+    function toggleBodyScroll() {
+        if (isOpen) {
+            // Enable scrolling
+            document.body.style.overflow = '';
+            document.body.style.height = '';
+        } else {
+            // Disable scrolling
+            document.body.style.overflow = 'hidden';
+            document.body.style.height = '100vh';
+        }
+    }
+
     //hamburger menu animation
     function toggleHamburgerMenuAnimation() {
         const tl = createTimeline();
+
+        toggleBodyScroll();
 
         tl.add("#hamburger-line-1", {
             width: ["100%", "0%"],
@@ -358,13 +376,37 @@ function setupHamburgerMenu() {
                     ease: "linear",
                 },
                 "<<"
+            ).add(
+                hamburgerPanelContainer,
+                {
+                    translateX: isOpen ? ["0%", "100%"] : ["100%", "0%"],
+                    duration: 500,
+                    ease: "inOutSine",
+                },
+                "<<"
+            ).add(
+                ["#hamburger-line-1", "#hamburger-line-2"],
+                {
+                    backgroundColor: isOpen ? ["#000", "#fff"] : ["#fff", "#000"],
+                    duration: 500,
+                    ease: "inOutSine",
+                },
+                "<<-=500"
+            ).add(
+                ".indicator-line",
+                {
+                    backgroundColor: isOpen ? ["#000", "#fff"] : ["#fff", "#000"],
+                    duration: 500,
+                    ease: "inOutSine",
+                },
+                "<<"
             );
 
         isOpen = !isOpen;
     }
 
     // toggle hamburger menu animation on click
-    hamburger.addEventListener("click", () => {
+    hamburgerMenuContainer.addEventListener("click", () => {
         toggleHamburgerMenuAnimation();
     });
 }

@@ -81,6 +81,31 @@
             <img src="assets/images/hero_bg.jpg" alt="hero-bg"
                 class="scale-[1.15] w-full h-full object-cover object-center opacity-40">
         </div>
+
+        <div id="hamburger-panel-container" class="translate-x-full z-10 xl:hidden fixed top-0 left-0 w-full h-dvh bg-[#D9D5D5]">
+            <div id="hamburger-panel-content-container" class="relative w-full h-full flex flex-col items-end pt-40 px-4">
+                <div class="flex flex-col gap-4 items-end">
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#">Home</a>
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#heroes-section">Heroes</a>
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#">Series</a>
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#">Chronology</a>
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#">Forum</a>
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#">Fan Art</a>
+                </div>
+
+                <!-- Sign In Button For Hamburger Panel -->
+                <div class="block xl:hidden absolute bottom-6 left-4 w-[149px] h-[43px] cursor-pointer">
+                    <svg class="absolute w-full h-full" viewBox="0 0 178 56" fill="none">
+                        <path d="M161 56H1V2H175V30" stroke="#151515" />
+                    </svg>
+                    <p
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[#151515] font-[inter] font-normal uppercase text-xl">
+                        Sign In
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <section id="hero-section" class="w-full h-screen bg-zinc-900 flex flex-col">
             <nav class="relative w-full flex items-center justify-between py-2 md:py-4 md:px-4">
                 <div id="logo-container" class="w-16 md:w-20 aspect-square">
@@ -99,7 +124,7 @@
 
                 <div id="buttons-container" class="absolute right-20 xl:static xl:right-0 flex items-center gap-8">
                     <!-- Audio Button -->
-                    <button id="audio-button" class="flex items-center space-x-1 px-2 py-3 outline-none">
+                    <button id="audio-button" class="z-10 xl:z-0 flex items-center space-x-1 px-2 py-3 outline-none">
                         <audio id="audio-element" class="hidden" src="assets/audio/bgm.mp3" loop></audio>
                         <div class="indicator-line" style="--animation-order: 2"></div>
                         <div class="indicator-line" style="--animation-order: 4"></div>
@@ -120,7 +145,7 @@
                     </div>
                 </div>
 
-                <div id="hamburger-menu-container" class="block xl:hidden">
+                <div id="hamburger-menu-container" class="z-10 xl:z-0 block xl:hidden">
                     <div id="hamburger-menu"
                         class="w-12 h-10 md:w-16 md:h-12 flex flex-col justify-center items-center gap-2.5 cursor-pointer">
                         <div id="hamburger-line-1-container" class="w-[60%] h-px relative">
@@ -204,6 +229,13 @@
                 </div>
             </div>
 
+        </section>
+
+        
+        <section id="heroes-section" class="w-full h-screen bg-zinc-900">
+            <div class="w-full h-full flex items-center justify-center">
+                <h1 class="text-white text-4xl font-[lexend] font-extrabold uppercase">Heroes</h1>
+            </div>
         </section>
     </main>
 
