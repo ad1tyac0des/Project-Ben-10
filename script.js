@@ -295,11 +295,11 @@ function setupHamburgerMenu() {
     const hamburgerMenuContainer = document.querySelector("#hamburger-menu-container");
     const hamburgerPanelContainer = document.querySelector("#hamburger-panel-container");
     const hamburger = document.querySelector("#hamburger-menu");
+    const hamburgerPanelLinks = document.querySelectorAll("#hamburger-panel-links a");
+
     const lineGap = window.getComputedStyle(hamburger).getPropertyValue("gap");
     let isOpen = false;
-
-    const hamburgerMenuDims = hamburger.getBoundingClientRect();
-
+    
     function toggleBodyScroll() {
         if (isOpen) {
             // Enable scrolling
@@ -405,7 +405,14 @@ function setupHamburgerMenu() {
         isOpen = !isOpen;
     }
 
-    // toggle hamburger menu animation on click
+    // toggle hamburger menu animation on clicking any link
+    hamburgerPanelLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            toggleHamburgerMenuAnimation();
+        })
+    });
+
+    // toggle hamburger menu animation on clicking close button
     hamburgerMenuContainer.addEventListener("click", () => {
         toggleHamburgerMenuAnimation();
     });
