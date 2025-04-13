@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .indicator-line {
     height: 0.25rem;
     width: 1px;

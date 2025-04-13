@@ -78,7 +78,8 @@
     <!-- main section -->
     <main class="xl:container 2xl:mx-auto min-h-screen px-4 md:px-10 2xl:px-0 bg-zinc-900">
         <div id="hero-bg-container" class="overflow-hidden absolute top-0 left-0 w-full h-screen">
-            <img src="assets/images/hero_bg.jpg" alt="hero-bg" class="scale-[1.15] w-full h-full object-cover object-center opacity-40">
+            <img src="assets/images/hero_bg.jpg" alt="hero-bg"
+                class="scale-[1.15] w-full h-full object-cover object-center opacity-40">
         </div>
         <section id="hero-section" class="w-full h-screen bg-zinc-900 flex flex-col">
             <nav class="relative w-full flex items-center justify-between py-2 md:py-4">
@@ -133,29 +134,76 @@
             </nav>
 
             <div id="hero-section-content-container" class="relative w-full flex-1">
-                <div id="hero-section-content-text-container" class="w-full flex flex-col gap-2 md:gap-4 items-center justify-center mt-36">
+                <div id="hero-section-content-text-container"
+                    class="w-full flex flex-col gap-2 md:gap-4 items-center justify-center mt-36">
                     <h3 class="font-[lexend] font-extrabold text-5xl md:text-7xl uppercase text-white">Its</h3>
                     <div class="flex flex-col md:flex-row items-center gap-0 md:gap-10">
-                        <h1 class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl uppercase text-white">Hero</h1>
-                        <h1 class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl tracking-wider md:tracking-normal uppercase text-white">Time</h1>
+                        <h1
+                            class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl uppercase text-white">
+                            Hero</h1>
+                        <h1
+                            class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl tracking-wider md:tracking-normal uppercase text-white">
+                            Time</h1>
                     </div>
                 </div>
 
-                <div id="hero-section-content-image-container" class="absolute top-0 left-0 w-full h-full flex items-end justify-center">
-                    <div id="hero-image-1" class="w-auto h-[31rem] md:h-auto md:w-56 mb-16 md:mb-1 translate-x-3 md:translate-x-24">
-                        <img src="assets/images/ben_af.png" alt="hero-image" class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                <div id="hero-section-content-image-container"
+                    class="absolute top-0 left-0 w-full h-full flex items-end justify-center">
+                    <div id="hero-image-1"
+                        class="w-auto h-[31rem] md:h-auto md:w-56 mb-16 md:mb-1 translate-x-3 md:translate-x-24">
+                        <img src="assets/images/ben_af.png" alt="hero-image"
+                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
                     </div>
 
                     <div id="hero-image-2" class="w-auto h-[28rem] md:h-auto md:w-[19.5rem] mb-16 md:mb-1">
-                        <img src="assets/images/ben_os.png" alt="hero-image" class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                        <img src="assets/images/ben_os.png" alt="hero-image"
+                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
                     </div>
 
-                    <div id="hero-image-3" class="w-auto h-[31rem] md:h-auto md:w-[10.75rem] mb-16 md:mb-1 -translate-x-3 md:-translate-x-24">
-                        <img src="assets/images/ben_ov.png" alt="hero-image" class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                    <div id="hero-image-3"
+                        class="w-auto h-[31rem] md:h-auto md:w-[10.75rem] mb-16 md:mb-1 -translate-x-3 md:-translate-x-24">
+                        <img src="assets/images/ben_ov.png" alt="hero-image"
+                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
                     </div>
                 </div>
+
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2">
+                    <a href="#heroes-section">
+                    <svg class="size-12 md:size-16" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46.0469 47.8166L51.9869 41.8766L53.6837 43.5746L46.0469 51.2114L38.4102 43.5746L40.107 41.8778L46.0469 47.8166Z"
+                            fill="white" />
+                        <mask id="path-2-inside-1_457_2" fill="white">
+                            <path
+                                d="M40.4736 80.8882C31.4324 79.847 23.1449 75.3666 17.2979 68.3591C11.451 61.3515 8.48385 52.3433 9.00051 43.1679C9.51717 33.9925 13.4788 25.3394 20.079 18.9698C26.6793 12.6003 35.4221 8.99285 44.5282 8.88181L44.5408 10.985C35.965 11.0896 27.7313 14.4869 21.5153 20.4856C15.2994 26.4843 11.5685 34.6334 11.082 43.2746C10.5954 51.9157 13.3897 60.3993 18.8962 66.9988C24.4027 73.5984 32.2076 77.8178 40.7223 78.7984L40.4736 80.8882Z" />
+                        </mask>
+                        <path
+                            d="M40.4736 80.8882C31.4324 79.847 23.1449 75.3666 17.2979 68.3591C11.451 61.3515 8.48385 52.3433 9.00051 43.1679C9.51717 33.9925 13.4788 25.3394 20.079 18.9698C26.6793 12.6003 35.4221 8.99285 44.5282 8.88181L44.5408 10.985C35.965 11.0896 27.7313 14.4869 21.5153 20.4856C15.2994 26.4843 11.5685 34.6334 11.082 43.2746C10.5954 51.9157 13.3897 60.3993 18.8962 66.9988C24.4027 73.5984 32.2076 77.8178 40.7223 78.7984L40.4736 80.8882Z"
+                            fill="white" />
+                        <path
+                            d="M40.4736 80.8882C31.4324 79.847 23.1449 75.3666 17.2979 68.3591C11.451 61.3515 8.48385 52.3433 9.00051 43.1679C9.51717 33.9925 13.4788 25.3394 20.079 18.9698C26.6793 12.6003 35.4221 8.99285 44.5282 8.88181L44.5408 10.985C35.965 11.0896 27.7313 14.4869 21.5153 20.4856C15.2994 26.4843 11.5685 34.6334 11.082 43.2746C10.5954 51.9157 13.3897 60.3993 18.8962 66.9988C24.4027 73.5984 32.2076 77.8178 40.7223 78.7984L40.4736 80.8882Z"
+                            fill="white" fill-opacity="0.2" />
+                        <path
+                            d="M40.4736 80.8882C31.4324 79.847 23.1449 75.3666 17.2979 68.3591C11.451 61.3515 8.48385 52.3433 9.00051 43.1679C9.51717 33.9925 13.4788 25.3394 20.079 18.9698C26.6793 12.6003 35.4221 8.99285 44.5282 8.88181L44.5408 10.985C35.965 11.0896 27.7313 14.4869 21.5153 20.4856C15.2994 26.4843 11.5685 34.6334 11.082 43.2746C10.5954 51.9157 13.3897 60.3993 18.8962 66.9988C24.4027 73.5984 32.2076 77.8178 40.7223 78.7984L40.4736 80.8882Z"
+                            stroke="white" stroke-width="2" mask="url(#path-2-inside-1_457_2)" />
+                        <mask id="path-3-inside-2_457_2" fill="white">
+                            <path
+                                d="M48.5664 81.1342C57.6662 80.9902 66.3554 77.3494 72.8654 70.953C79.3755 64.5565 83.2172 55.885 83.6086 46.7034C84 37.5218 80.9117 28.5201 74.9723 21.5304C69.0329 14.5407 60.6887 10.0882 51.6381 9.07925L51.4179 11.1709C59.9416 12.1212 67.7998 16.3143 73.3934 22.897C78.9869 29.4797 81.8954 37.9573 81.5268 46.6042C81.1581 55.2512 77.5402 63.4177 71.4092 69.4417C65.2782 75.4657 57.095 78.8944 48.5251 79.0301L48.5664 81.1342Z" />
+                        </mask>
+                        <path
+                            d="M48.5664 81.1342C57.6662 80.9902 66.3554 77.3494 72.8654 70.953C79.3755 64.5565 83.2172 55.885 83.6086 46.7034C84 37.5218 80.9117 28.5201 74.9723 21.5304C69.0329 14.5407 60.6887 10.0882 51.6381 9.07925L51.4179 11.1709C59.9416 12.1212 67.7998 16.3143 73.3934 22.897C78.9869 29.4797 81.8954 37.9573 81.5268 46.6042C81.1581 55.2512 77.5402 63.4177 71.4092 69.4417C65.2782 75.4657 57.095 78.8944 48.5251 79.0301L48.5664 81.1342Z"
+                            fill="white" />
+                        <path
+                            d="M48.5664 81.1342C57.6662 80.9902 66.3554 77.3494 72.8654 70.953C79.3755 64.5565 83.2172 55.885 83.6086 46.7034C84 37.5218 80.9117 28.5201 74.9723 21.5304C69.0329 14.5407 60.6887 10.0882 51.6381 9.07925L51.4179 11.1709C59.9416 12.1212 67.7998 16.3143 73.3934 22.897C78.9869 29.4797 81.8954 37.9573 81.5268 46.6042C81.1581 55.2512 77.5402 63.4177 71.4092 69.4417C65.2782 75.4657 57.095 78.8944 48.5251 79.0301L48.5664 81.1342Z"
+                            fill="white" fill-opacity="0.2" />
+                        <path
+                            d="M48.5664 81.1342C57.6662 80.9902 66.3554 77.3494 72.8654 70.953C79.3755 64.5565 83.2172 55.885 83.6086 46.7034C84 37.5218 80.9117 28.5201 74.9723 21.5304C69.0329 14.5407 60.6887 10.0882 51.6381 9.07925L51.4179 11.1709C59.9416 12.1212 67.7998 16.3143 73.3934 22.897C78.9869 29.4797 81.8954 37.9573 81.5268 46.6042C81.1581 55.2512 77.5402 63.4177 71.4092 69.4417C65.2782 75.4657 57.095 78.8944 48.5251 79.0301L48.5664 81.1342Z"
+                            stroke="white" stroke-width="2" mask="url(#path-3-inside-2_457_2)" />
+                    </svg>
+                </a>
+                </div>
             </div>
-                
+
         </section>
     </main>
 
