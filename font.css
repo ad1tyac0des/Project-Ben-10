@@ -85,3 +85,51 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "jetbrains-mono";
+    src: url("assets/fonts/JetBrainsMono-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "jetbrains-mono";
+    src: url("assets/fonts/JetBrainsMono-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: "jetbrains-mono";
+    src: url("assets/fonts/JetBrainsMono-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: "jetbrains-mono";
+    src: url("assets/fonts/JetBrainsMono-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: "jetbrains-mono";
+    src: url("assets/fonts/JetBrainsMono-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
