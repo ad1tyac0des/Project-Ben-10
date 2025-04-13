@@ -502,6 +502,7 @@ function setupHeroSectionImages() {
         heroImage2.classList.replace("w-[19.5rem]", "w-[22rem]");
         heroImage3.classList.replace("w-[10.75rem]", "w-[11.5rem]");
         // heroImage1.classList.add("bg-red-500");
+        document.querySelector("nav").classList.replace("md:px-4", "md:px-0");
     }
 
     if (viewportWidth < 768) {
