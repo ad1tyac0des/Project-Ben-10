@@ -79,7 +79,7 @@
     <main class="w-full min-h-screen bg-zinc-900">
         <div id="hero-bg-container" class="overflow-hidden absolute top-0 left-0 w-full h-screen">
             <img src="assets/images/hero_bg.jpg" alt="hero-bg"
-                class="scale-[1.15] w-full h-full object-cover object-center opacity-40">
+                class="scale-[1.15] w-full h-full object-cover object-center opacity-40" />
         </div>
 
         <div id="hamburger-panel-container"
@@ -167,14 +167,18 @@
             <div id="hero-section-content-container" class="relative w-full flex-1">
                 <div id="hero-section-content-text-container"
                     class="w-full flex flex-col gap-2 md:gap-4 items-center justify-center mt-36">
-                    <h3 class="font-[lexend] font-extrabold text-5xl md:text-7xl uppercase text-white">Its</h3>
+                    <h3 class="font-[lexend] font-extrabold text-5xl md:text-7xl uppercase text-white">
+                        Its
+                    </h3>
                     <div class="flex flex-col md:flex-row items-center gap-0 md:gap-10">
                         <h1
                             class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl uppercase text-white">
-                            Hero</h1>
+                            Hero
+                        </h1>
                         <h1
                             class="font-[lexend] font-extrabold text-7xl md:text-8xl lg:text-[7.5rem] xl:text-9xl tracking-wider md:tracking-normal uppercase text-white">
-                            Time</h1>
+                            Time
+                        </h1>
                     </div>
                 </div>
 
@@ -183,18 +187,18 @@
                     <div id="hero-image-1"
                         class="w-auto h-[31rem] md:h-auto md:w-56 mb-16 md:mb-1 translate-x-3 md:translate-x-24">
                         <img src="assets/images/ben_af.png" alt="hero-image"
-                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain" />
                     </div>
 
                     <div id="hero-image-2" class="w-auto h-[28rem] md:h-auto md:w-[19.5rem] mb-16 md:mb-1">
                         <img src="assets/images/ben_os.png" alt="hero-image"
-                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain" />
                     </div>
 
                     <div id="hero-image-3"
                         class="w-auto h-[31rem] md:h-auto md:w-[10.75rem] mb-16 md:mb-1 -translate-x-3 md:-translate-x-24">
                         <img src="assets/images/ben_ov.png" alt="hero-image"
-                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain">
+                            class="w-full scale-[1.35] min-[540px]:scale-110 sm:scale-100 h-full object-contain" />
                     </div>
                 </div>
 
@@ -235,18 +239,18 @@
                     </a>
                 </div>
             </div>
-
         </section>
-
 
         <section id="heroes-section" class="w-full h-screen bg-zinc-900">
             <div class="w-full h-full flex items-center justify-center">
-                <h1 class="text-white text-4xl font-[lexend] font-extrabold uppercase">Heroes</h1>
+                <h1 class="text-white text-4xl font-[lexend] font-extrabold uppercase">
+                    Heroes
+                </h1>
             </div>
         </section>
 
         <!-- Chronology Section -->
-        <section id="chronology-section" class="w-full min-h-screen border border-red-500">
+        <section id="chronology-section" class="w-full min-h-screen">
             <!-- <svg width="w-full" height="auto" viewBox="0 0 1689 91" fill="none" xmlns="http://www.w3.org/2000/svg"
                     preserveAspectRatio="xMaxYMid meet">
                     <path d="M0 90L47.9858 43.9107H1627.02L1688 1" stroke="white" stroke-width="2" />
@@ -254,20 +258,206 @@
                 </svg> -->
             <div id="chronology-header-wireframe" class="px-2">
                 <svg class="w-full h-auto" viewBox="0 0 1698 99" fill="none">
-                    <path d="M5 94L52.9858 47.9107H1632.02L1693 5" stroke="white" stroke-width="1" />
+                    <path d="M5 94L52.9858 47.9107H1632.02L1693 5" class="stroke-white stroke-2 md:stroke-1" />
                     <circle cx="1693" cy="5" r="5" fill="white" />
                     <circle cx="5" cy="94" r="5" fill="white" />
                 </svg>
             </div>
 
             <div id="chronology-heading"
-                class="flex flex-row items-end relative gap-5 min-[500px]:gap-10 w-[80vw] leading-none mt-2 mb-10">
+                class="flex flex-row items-end relative gap-5 md:gap-10 xl:gap-16 leading-none mt-2 px-5 sm:px-8 md:px-10 xl:px-12 mb-6 xl:mb-10">
+                <h1
+                    class="text-[2.4rem] sm:text-6xl md:text-7xl xl:text-8xl 2xl:text-9xl uppercase font-[lexend] text-[#83DB00]">
+                    Chronology
+                </h1>
+                <div class="pb-1.5 md:pb-2 xl:pb-3 2xl:pb-4">
+                    <div class="square size-2 md:size-3 xl:size-4 bg-[#83DB00]"></div>
+                </div>
+            </div>
 
-                <h1 class="text-[3rem] min-[500px]:text-[4rem] uppercase font-[lexend] text-[#83DB00]">Chronology</h1>
-                <div class="pb-1.5">
-                    <div class="square w-[.8rem] h-[.8rem] bg-[#83DB00]"></div>
+            <!-- Classic Storyline Section -->
+            <div id="classic-storyline-section" class="w-full bg-[#81D700] flex flex-col items-center border pb-10">
+                <div class="w-full aspect-video">
+                    <img src="assets/images/os_banner.png" alt="classic-banner"
+                        class="w-full h-full object-cover object-top" />
                 </div>
 
+                <div class="w-[95%] md:w-[80%] lg:w-[80%] 2xl:w-[60%] my-6 xl:my-10">
+                    <p class="font-[ibm-plex-mono-400] text-sm md:text-lg lg:text-xl 2xl:text-2xl text-center">Ben
+                        discovers the Omnitrix, learns to use new alien forms, fights iconic villains like Vilgax, Kevin
+                        11, Dr. Animo, and Ghostfreak, and uncovers Grandpa Max's Plumber legacy. Ends summer defeating
+                        the Negative 10, becoming a true hero.</p>
+                </div>
+
+                <div class="series-header-wireframe relative w-full flex justify-center">
+                    <svg class="relative w-[90%] h-auto" viewBox="0 0 1587 217" fill="none">
+                        <path d="M1489 1.5H1.5V118L68 215.5H1585.5V110.5L1489 1.5Z"
+                            class="stroke-white stroke-2 md:stroke-1" />
+                    </svg>
+
+                    <h1
+                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl uppercase font-[lexend] text-white">
+                        Classic
+                    </h1>
+                </div>
+
+                <!-- vertical wireframe and content container -->
+                <div class="w-full relative">
+                    <!-- vertical wireframe -->
+                    <svg class="vertical-wireframe h-full absolute w-[2px] left-1/2 -translate-x-1/2"
+                        viewBox="0 0 2 2961" fill="none">
+                        <path class="stroke-white stroke-1" d="M1.5 0V2961" />
+                    </svg>
+
+                    <!-- content container (🦊) -->
+                    <div class="relative top-0 left-0 w-full h-full px-3 md:px-6 xl:px-8">
+
+                        <!-- Content Type 1 -->
+                        <div class="w-full h-fit flex mt-8 md:mt-20 lg:mt-24">
+                            <!-- left side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-end pr-1 md:pr-2 xl:pr-4">
+                                <h1
+                                    class="font-[jetbrains-mono] text-black text-[0.95rem] min-[420px]:text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-[2.7rem] 2xl:text-5xl uppercase text-right">
+                                    THE OMNTRIX ARISES</h1>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+
+                            <!-- right side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-start pl-1 md:pl-2 xl:pl-4">
+                                <div class="w-fit font-[lexend] uppercase text-[#73BB06]">
+                                    <h3
+                                        class="text-[0.875rem] sm:text-[1.25rem] md:text-[1.875rem] lg:text-[2.25rem] 2xl:text-[2.5rem] font-bold tracking-tighter pl-1.5 sm:pl-2 md:pl-3 lg:pl-4 xl:pl-5 leading-tight">
+                                        27 December
+                                    </h3>
+
+                                    <h1
+                                        class="text-[3.75rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] min-[1900px]:text-[10.8rem] font-normal leading-[0.8] tracking-tighter">
+                                        2005
+                                    </h1>
+                                </div>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Type 2 -->
+                        <div class="w-full h-fit flex mt-8 md:mt-20 lg:mt-24">
+                            <!-- left side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-end pr-1 md:pr-2 xl:pr-4">
+                                <div class="w-fit font-[lexend] uppercase text-[#73BB06]">
+                                    <h3
+                                        class="text-[0.875rem] sm:text-[1.25rem] md:text-[1.875rem] lg:text-[2.25rem] 2xl:text-[2.5rem] font-bold tracking-tighter pl-1.5 sm:pl-2 md:pl-3 lg:pl-4 xl:pl-5 leading-tight">
+                                        29 May
+                                    </h3>
+
+                                    <h1
+                                        class="text-[3.75rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] min-[1900px]:text-[10.8rem] font-normal leading-[0.8] tracking-tighter">
+                                        2006
+                                    </h1>
+                                </div>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+
+                            <!-- right side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-start pl-1 md:pl-2 xl:pl-4">
+                                <h1
+                                    class="font-[jetbrains-mono] text-black text-[0.95rem] min-[420px]:text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-[2.7rem] 2xl:text-5xl uppercase text-left">
+                                    Secrets of the Past</h1>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Type 1 -->
+                        <div class="w-full h-fit flex mt-8 md:mt-20 lg:mt-24">
+                            <!-- left side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-end pr-1 md:pr-2 xl:pr-4">
+                                <h1
+                                    class="font-[jetbrains-mono] text-black text-[0.95rem] min-[420px]:text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-[2.7rem] 2xl:text-5xl uppercase text-right">
+                                    BEN MEETS BEN</h1>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+
+                            <!-- right side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-start pl-1 md:pl-2 xl:pl-4">
+                                <div class="w-fit font-[lexend] uppercase text-[#73BB06]">
+                                    <h3
+                                        class="text-[0.875rem] sm:text-[1.25rem] md:text-[1.875rem] lg:text-[2.25rem] 2xl:text-[2.5rem] font-bold tracking-tighter pl-1.5 sm:pl-2 md:pl-3 lg:pl-4 xl:pl-5 leading-tight">
+                                        27 December
+                                    </h3>
+
+                                    <h1
+                                        class="text-[3.75rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] min-[1900px]:text-[10.8rem] font-normal leading-[0.8] tracking-tighter">
+                                        2005
+                                    </h1>
+                                </div>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Type 2 -->
+                        <div class="w-full h-fit flex mt-8 md:mt-20 lg:mt-24">
+                            <!-- left side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-end pr-1 md:pr-2 xl:pr-4">
+                                <div class="w-fit font-[lexend] uppercase text-[#73BB06]">
+                                    <h3
+                                        class="text-[0.875rem] sm:text-[1.25rem] md:text-[1.875rem] lg:text-[2.25rem] 2xl:text-[2.5rem] font-bold tracking-tighter pl-1.5 sm:pl-2 md:pl-3 lg:pl-4 xl:pl-5 leading-tight">
+                                        29 May
+                                    </h3>
+
+                                    <h1
+                                        class="text-[3.75rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] min-[1900px]:text-[10.8rem] font-normal leading-[0.8] tracking-tighter">
+                                        2006
+                                    </h1>
+                                </div>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+
+                            <!-- right side -->
+                            <div class="w-1/2 h-full flex gap-4 md:gap-8 flex-col items-start pl-1 md:pl-2 xl:pl-4">
+                                <h1
+                                    class="font-[jetbrains-mono] text-black text-[0.95rem] min-[420px]:text-[1.1rem] sm:text-[1.7rem] md:text-[2rem] lg:text-4xl xl:text-[2.7rem] 2xl:text-5xl uppercase text-left">
+                                    HERO OF THE SUMMER</h1>
+
+                                <div class="large-simple-image w-[80%] md:w-[70%] lg:w-[57%] 2xl:w-[50%] aspect-[14/9]">
+                                    <img class="w-full h-full object-cover"
+                                        src="https://wallpapers.com/images/hd/ben-10-1920-x-1080-picture-ownbnrib49cl418a.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border w-[30%] md:w-[25%] lg:w-[20%] 2xl:w-[18%] aspect-[9/16] 2xl:aspect-[10/16] relative left-1/2 -translate-x-1/2 pt-8 md:pt-20 lg:pt-24">
+                            <img class="w-full h-full object-cover"
+                                src="assets/images/OS/ben.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
