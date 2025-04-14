@@ -238,38 +238,401 @@
 
         </section>
 
-
         <section id="heroes-section" class="w-full h-screen bg-zinc-900">
-            <div class="w-full h-full flex items-center justify-center">
-                <h1 class="text-white text-4xl font-[lexend] font-extrabold uppercase">Heroes</h1>
-            </div>
-        </section>
-
-        <!-- Chronology Section -->
-        <section id="chronology-section" class="w-full min-h-screen border border-red-500">
-            <!-- <svg width="w-full" height="auto" viewBox="0 0 1689 91" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="xMaxYMid meet">
-                    <path d="M0 90L47.9858 43.9107H1627.02L1688 1" stroke="white" stroke-width="2" />
-
-                </svg> -->
-            <div id="chronology-header-wireframe" class="px-2">
+            <!-- Header wireframe with SVG line and circles -->
+            <div id="heroes-header-wireframe" class="px-2">
                 <svg class="w-full h-auto" viewBox="0 0 1698 99" fill="none">
-                    <path d="M5 94L52.9858 47.9107H1632.02L1693 5" stroke="white" stroke-width="1" />
+                    <!-- Diagonal line with circles at endpoints -->
+                    <path d="M5 94L52.9858 47.9107H1632.02L1693 5" class="stroke-white stroke-2 md:stroke-1" />
                     <circle cx="1693" cy="5" r="5" fill="white" />
                     <circle cx="5" cy="94" r="5" fill="white" />
                 </svg>
             </div>
-
-            <div id="chronology-heading"
-                class="flex flex-row items-end relative gap-5 min-[500px]:gap-10 w-[80vw] leading-none mt-2 mb-10">
-
-                <h1 class="text-[3rem] min-[500px]:text-[4rem] uppercase font-[lexend] text-[#83DB00]">Chronology</h1>
-                <div class="pb-1.5">
-                    <div class="square w-[.8rem] h-[.8rem] bg-[#83DB00]"></div>
+            <!-- Section heading with title and square decoration -->
+            <div id="heroes-heading"
+                class="flex flex-row items-end relative gap-5 md:gap-10 xl:gap-16 leading-none mt-2 px-5 sm:px-8 md:px-10 xl:px-12 mb-6 xl:mb-10">
+                <h1
+                    class="text-[2.4rem] sm:text-6xl md:text-7xl xl:text-8xl min-[1900px]:text-9xl uppercase font-[lexend] text-[#83DB00]">
+                    Heroes</h1>
+                <div class="pb-1.5 md:pb-2 xl:pb-3 min-[1900px]:pb-4">
+                    <div class="square size-2 md:size-3 xl:size-4 bg-[#83DB00]"></div>
                 </div>
-
+            </div>
+            <!-- Main content area with images and info -->
+            <div id="heroes-content"
+                class="w-full h-fit md:h-[57vh] lg:h-full flex flex-col-reverse md:flex-row md:justify-between p-2 md:px-4 lg:p-10 min-[1900px]:p-16 gap-6">
+                <!-- Image gallery with scrollable hero images -->
+                <div id="heroes-images"
+                    class="flex md:flex-col gap-5 md:gap-4 w-full h-fit md:w-fit md:h-full overflow-hidden overflow-x-auto md:overflow-y-auto">
+                    <!-- Individual image container -->
+                    <div
+                        class="w-16 h-16 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
+                        <!-- Corner decorations for image -->
+                        <svg class="absolute top-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" stroke="white" />
+                            <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" stroke="white" />
+                            <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" stroke="white" />
+                        </svg>
+                        <svg class="absolute top-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" stroke="white" />
+                            <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" stroke="white" />
+                            <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" stroke="white" />
+                            <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" stroke="white" />
+                            <line x1="1.5" y1="19.4766" x2="1.5" y2="20" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" stroke="white" />
+                            <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" stroke="white" />
+                            <line x1="19.4766" y1="19.5" x2="20" y2="19.5" stroke="white" />
+                        </svg>
+                        <!-- Image element -->
+                        <div class="w-full h-full">
+                            <img src="assets/images/daimond_head.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+                    <!-- Repeat for other images -->
+                    <div
+                        class="w-16 h-16 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
+                        <svg class="absolute top-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" stroke="white" />
+                            <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" stroke="white" />
+                            <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" stroke="white" />
+                        </svg>
+                        <svg class="absolute top-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" stroke="white" />
+                            <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" stroke="white" />
+                            <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" stroke="white" />
+                            <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" stroke="white" />
+                            <line x1="1.5" y1="19.4766" x2="1.5" y2="20" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" stroke="white" />
+                            <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" stroke="white" />
+                            <line x1="19.4766" y1="19.5" x2="20" y2="19.5" stroke="white" />
+                        </svg>
+                        <div class="w-full h-full">
+                            <img src="assets/images/daimond_head.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+                    <div
+                        class="w-16 h-16 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
+                        <svg class="absolute top-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" stroke="white" />
+                            <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" stroke="white" />
+                            <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" stroke="white" />
+                        </svg>
+                        <svg class="absolute top-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" stroke="white" />
+                            <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" stroke="white" />
+                            <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" stroke="white" />
+                            <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" stroke="white" />
+                            <line x1="1.5" y1="19.4766" x2="1.5" y2="20" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" stroke="white" />
+                            <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" stroke="white" />
+                            <line x1="19.4766" y1="19.5" x2="20" y2="19.5" stroke="white" />
+                        </svg>
+                        <div class="w-full h-full">
+                            <img src="assets/images/daimond_head.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+                    <div
+                        class="w-16 h-16 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
+                        <svg class="absolute top-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" stroke="white" />
+                            <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" stroke="white" />
+                            <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" stroke="white" />
+                        </svg>
+                        <svg class="absolute top-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" stroke="white" />
+                            <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" stroke="white" />
+                            <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" stroke="white" />
+                            <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" stroke="white" />
+                            <line x1="1.5" y1="19.4766" x2="1.5" y2="20" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" stroke="white" />
+                            <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" stroke="white" />
+                            <line x1="19.4766" y1="19.5" x2="20" y2="19.5" stroke="white" />
+                        </svg>
+                        <div class="w-full h-full">
+                            <img src="assets/images/daimond_head.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+                    <div
+                        class="w-16 h-16 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
+                        <svg class="absolute top-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" stroke="white" />
+                            <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" stroke="white" />
+                            <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" stroke="white" />
+                        </svg>
+                        <svg class="absolute top-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" stroke="white" />
+                            <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" stroke="white" />
+                            <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" stroke="white" />
+                            <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" stroke="white" />
+                            <line x1="1.5" y1="19.4766" x2="1.5" y2="20" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" stroke="white" />
+                            <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" stroke="white" />
+                            <line x1="19.4766" y1="19.5" x2="20" y2="19.5" stroke="white" />
+                        </svg>
+                        <div class="w-full h-full">
+                            <img src="assets/images/daimond_head.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+                    <div
+                        class="w-16 h-16 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
+                        <svg class="absolute top-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" stroke="white" />
+                            <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" stroke="white" />
+                            <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" stroke="white" />
+                        </svg>
+                        <svg class="absolute top-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" stroke="white" />
+                            <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" stroke="white" />
+                            <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" stroke="white" />
+                            <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" stroke="white" />
+                            <line x1="1.5" y1="19.4766" x2="1.5" y2="20" stroke="white" />
+                        </svg>
+                        <svg class="absolute bottom-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
+                            viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" stroke="white" />
+                            <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" stroke="white" />
+                            <line x1="19.4766" y1="19.5" x2="20" y2="19.5" stroke="white" />
+                        </svg>
+                        <div class="w-full h-full">
+                            <img src="assets/images/daimond_head.png" class="w-full h-full object-cover" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero information panel -->
+                <div id="heroes-info"
+                    class="w-full h-full md:w-[80%] relative bg-[#212121] flex flex-col-reverse md:flex-row overflow-hidden gap-8 xl:gap-40 p-4 md:p-4 min-[1900px]:p-8">
+                    <!-- Corner SVG decorations -->
+                    <svg class="absolute top-0 left-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.15625" y1="23" x2="1.15625" y2="1.57895" stroke="white" />
+                        <line x1="1.65625" y1="1.07886" x2="25.9984" y2="1.07886" stroke="white" />
+                        <line x1="1.65625" y1="1.5" x2="0.998355" y2="1.5" stroke="white" />
+                    </svg>
+                    <svg class="absolute top-0 right-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="21.4211" y2="-0.5" transform="matrix(0 -1 -1 0 24.3438 23)"
+                            stroke="white" />
+                        <line y1="-0.5" x2="24.3421" y2="-0.5" transform="matrix(-1 0 0 1 24.3438 1.57886)"
+                            stroke="white" />
+                        <line y1="-0.5" x2="0.657895" y2="-0.5" transform="matrix(1 0 0 -1 24.3438 1)" stroke="white" />
+                    </svg>
+                    <svg class="absolute bottom-0 right-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="24.8438" x2="24.8438" y2="21.4211" stroke="white" />
+                        <line x1="24.3438" y1="21.9211" x2="0.00164413" y2="21.9211" stroke="white" />
+                        <line x1="24.3438" y1="21.5" x2="25.0016" y2="21.5" stroke="white" />
+                    </svg>
+                    <svg class="absolute bottom-0 left-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="21.4211" y2="-0.5" transform="matrix(0 1 1 0 1.65625 0)" stroke="white" />
+                        <line y1="-0.5" x2="24.3421" y2="-0.5" transform="matrix(1 0 0 -1 1.65625 21.4211)"
+                            stroke="white" />
+                        <line y1="-0.5" x2="0.657895" y2="-0.5" transform="matrix(-1 0 0 1 1.65625 22)"
+                            stroke="white" />
+                    </svg>
+                    <!-- Left side info: About, Abilities, Stats -->
+                    <div id="heroes-info-part1"
+                        class="w-full md:w-[60%] h-full md:h-full gap-8 md:gap-14 lg:gap-12 min-[1900px]:gap-16 flex flex-col relative">
+                        <!-- About section -->
+                        <div id="About">
+                            <h1
+                                class="w-fit h-fit bg-[#333333] text-[#727272] py-[.1rem] min-[1900px]:py-[.2rem] px-2 md:px-4 min-[1900px]:px-6 tracking-wider font-[inter] uppercase text-xs md:text-base min-[1900px]:text-xl">
+                                About</h1>
+                            <p
+                                class="font-[ibm-plex-mono-400] text-[#CDCDCD] text-sm md:text-base xl:text-lg min-[1900px]:text-xl leading-tight md:leading-5 mt-5 xl:mt-8 w-[95%] md:w-[80%]">
+                                A Methanosian from Methanos, Swampfire blends fire and plant powers with a knack for
+                                regeneration.
+                            </p>
+                        </div>
+                        <!-- Abilities section -->
+                        <div id="Abilities">
+                            <h1
+                                class="w-fit h-fit bg-[#333333] text-[#727272] py-[.1rem] min-[1900px]:py-[.2rem] px-2 md:px-4 min-[1900px]:px-6 tracking-wider font-[inter] uppercase text-xs md:text-base min-[1900px]:text-xl">
+                                Abilities</h1>
+                            <div
+                                class="flex flex-wrap w-[80%] min-[500px]:w-[60%] min-[1900px]:w-[80%] gap-2 min-[1900px]:gap-4 mt-5 min-[1900px]:mt-10">
+                                <p
+                                    class="w-fit h-fit px-2 min-[1900px]:px-6 py-1 text-white font-[jetbrains-mono] font-light text-xs min-[1900px]:text-lg bg-[#F4940E] rounded-sm">
+                                    Pyrokinesis</p>
+                                <p
+                                    class="w-fit h-fit px-2 min-[1900px]:px-6 py-1 text-white font-[jetbrains-mono] font-light text-xs min-[1900px]:text-lg bg-[#67AC00] rounded-sm">
+                                    Plant manipulation</p>
+                                <p
+                                    class="w-fit h-fit px-2 min-[1900px]:px-6 py-1 text-white font-[jetbrains-mono] font-light text-xs min-[1900px]:text-lg bg-[#D9B800] rounded-sm">
+                                    Methane gas</p>
+                                <p
+                                    class="w-fit h-fit px-2 min-[1900px]:px-6 py-1 text-white font-[jetbrains-mono] font-light text-xs min-[1900px]:text-lg bg-[#458CCF] rounded-sm">
+                                    Regeneration</p>
+                            </div>
+                        </div>
+                        <!-- Stats section -->
+                        <div id="Stats" class="pr-3 min-[500px]:pr-[8rem] md:pr-[0]">
+                            <h1
+                                class="w-fit h-fit bg-[#333333] text-[#727272] py-[.1rem] min-[1900px]:py-[.2rem] px-2 md:px-4 min-[1900px]:px-6 tracking-wider font-[inter] uppercase text-xs md:text-base min-[1900px]:text-xl">
+                                Stats</h1>
+                            <div class="flex flex-col gap-2 min-[1900px]:gap-3 mt-5 min-[1900px]:mt-10">
+                                <!-- Strength stat -->
+                                <div class="w-full h-fit bg-[#282828]">
+                                    <div class="flex w-[70%] bg-[#5B5B5B] items-center gap-1 min-[1900px]:gap-3">
+                                        <p
+                                            class="w-fit h-fit px-1.5 min-[1900px]:px-2 bg-white text-xs md:text-sm min-[1900px]:text-lg font-[lexend] font-light py-[.1rem] min-[1900px]:py-[.2rem]">
+                                            70</p>
+                                        <p
+                                            class="font-[ibm-plex-mono-400] uppercase text-xs md:text-sm min-[1900px]:text-lg text-white">
+                                            Strength
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Speed stat -->
+                                <div class="w-full h-fit bg-[#282828]">
+                                    <div class="flex w-[50%] bg-[#5B5B5B] items-center gap-1 min-[1900px]:gap-3">
+                                        <p
+                                            class="w-fit h-fit px-1.5 min-[1900px]:px-2 bg-white text-xs md:text-sm min-[1900px]:text-lg font-[lexend] font-light py-[.1rem] min-[1900px]:py-[.2rem]">
+                                            50</p>
+                                        <p
+                                            class="font-[ibm-plex-mono-400] uppercase text-xs md:text-sm min-[1900px]:text-lg text-white">
+                                            Speed
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Intelligence stat -->
+                                <div class="w-full h-fit bg-[#282828]">
+                                    <div class="flex w-[40%] bg-[#5B5B5B] items-center gap-1 min-[1900px]:gap-3">
+                                        <p
+                                            class="w-fit h-fit px-1.5 min-[1900px]:px-2 bg-white text-xs md:text-sm min-[1900px]:text-lg font-[lexend] font-light py-[.1rem] min-[1900px]:py-[.2rem]">
+                                            40</p>
+                                        <p
+                                            class="font-[ibm-plex-mono-400] uppercase text-xs md:text-sm min-[1900px]:text-lg text-white">
+                                            Intelligence
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Control stat -->
+                                <div class="w-full h-fit bg-[#282828]">
+                                    <div class="flex w-[80%] bg-[#5B5B5B] items-center gap-1 min-[1900px]:gap-3">
+                                        <p
+                                            class="w-fit h-fit px-1.5 min-[1900px]:px-2 bg-white text-xs md:text-sm min-[1900px]:text-lg font-[lexend] font-light py-[.1rem] min-[1900px]:py-[.2rem]">
+                                            80</p>
+                                        <p
+                                            class="font-[ibm-plex-mono-400] uppercase text-xs md:text-sm min-[1900px]:text-lg text-white">
+                                            Control
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Know More button -->
+                        <div id="know-more-button"
+                            class="relative md:absolute md:bottom-3 w-[8rem] min-[1900px]:w-48 h-[1.7rem] min-[1900px]:h-10 cursor-pointer">
+                            <svg class="w-full h-full" viewBox="0 0 178 56" fill="none" preserveAspectRatio="none">
+                                <path d="M161 56H1V2H175V30" stroke="white" />
+                            </svg>
+                            <p
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white w-full text-center font-[lexend] font-normal uppercase text-xs min-[1900px]:text-base">
+                                Know More
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Right side info: Hero details and image -->
+                    <div id="heroes-info-part2"
+                        class="h-full md:h-full md:w-[40%] 2xl:w-[27%] flex flex-row md:flex-col justify-between gap-2 md:gap-4">
+                        <!-- Hero details -->
+                        <div
+                            class="w-[14rem] min-[500px]:w-[60%] md:w-full border border-white bg-[#2D2D2D] pt-2 pb-2 pl-2.5 min-[1900px]:px-4 min-[1900px]:py-4">
+                            <h1
+                                class="text-white uppercase font-[jetbrains-mono] font-light text-xl min-[1900px]:text-4xl">
+                                Swampfire
+                            </h1>
+                            <div class="leading-none mt-2 mb-4">
+                                <p class="text-[#727272] font-[inter] min-[1900px]:text-2xl">Methanosian</p>
+                                <p class="text-[#727272] font-[inter] min-[1900px]:text-2xl"><span
+                                        class="font-[lexend]">6
+                                    </span>
+                                    feet
+                                </p>
+                            </div>
+                            <div class="xl:flex xl:flex-row items-center gap-2 flex-wrap">
+                                <div class="flex">
+                                    <p
+                                        class="text-white bg-[#9A9A9A] w-fit h-fit py-[.1rem] px-2 font-[ibm-plex-mono-400] text-xs min-[1900px]:text-lg">
+                                        AF</p>
+                                    <p
+                                        class="text-white bg-[#F4940E] w-fit h-fit py-[.1rem] px-2 font-[lexend] text-xs min-[1900px]:text-lg">
+                                        01</p>
+                                </div>
+                                <p
+                                    class="text-white bg-[#D9B800] font-[ibm-plex-mono-400] text-xs w-fit px-1 py-[.1rem] mt-2 xl:mt-0 min-[1900px]:text-lg">
+                                    Ben <span class="font-[lexend]">10</span> Returns:Part <span class="lexend">1</span>
+                                </p>
+                                <p class="text-[#727272] leading-none mt-2 xl:mt-0 min-[1900px]:text-xl">Methanos</p>
+                            </div>
+                        </div>
+                        <!-- Hero image container -->
+                        <div
+                            class="hero-info-image-container bg-white w-[50%] h-[21vh] md:w-full md:h-full clip-shape overflow-hidden md:p-px">
+                            <div class="hero-info-image-label w-full h-[21vh] md:h-full bg-[#2D2D2D] flex items-center justify-center">
+                                <img src="assets/images/swampfire.png" alt="Hero Image"
+                                    class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>

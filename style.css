@@ -45,3 +45,10 @@ img {
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
+
+#heroes-images::-webkit-scrollbar{
+    display: none;
+}
+.hero-info-image-label,.hero-info-image-container{
+    clip-path: polygon(100% 0, 100% 100%, 10% 100%, 0 95%,0 0);
+}
