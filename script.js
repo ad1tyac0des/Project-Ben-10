@@ -513,8 +513,8 @@ function setupAudioButton() {
         }, 100);
     }
 
-    // Play audio on first click(anywhere on the page)
-    document.addEventListener("click", (e) => {
+    // Play audio on first click(anywhere on the main section)
+    document.querySelector("main").addEventListener("click", (e) => {
         if (e.target.id !== "audio-button" && clickCount === 1) {
             isAudioPlaying = true;
             isIndicatorActive = true;
