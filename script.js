@@ -445,7 +445,7 @@ function setupAudioButton() {
     let isIndicatorActive = false;
     let clickCount = 1;
     let fadeIntervalRef = null;
-    let maxVolume = 0.3; 
+    let maxVolume = 0.2; 
 
     const audioButton = document.getElementById("audio-button");
     const audioElement = document.getElementById("audio-element");
@@ -1065,31 +1065,31 @@ function updateHeroInfo(index) {
 
 function setUpAliensData() {
     aliens_data.map((item, i) => {
-        const selectionBtn = `<div onclick="updateHeroInfo(${i})"
-            class="w-20 h-20 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
+        const selectionBtn = `<div id="hero-selection-btn-${i}" onclick="updateHeroInfo(${i})"
+            class="hero-selection-btns w-20 h-20 sm:w-24 sm:h-24 md:h-32 md:w-32 xl:h-40 min-[1900px]:h-48 xl:w-40 min-[1900px]:w-48 relative bg-[#151515] p-1.5 sm:p-2.5 md:p-3 xl:p-3 min-[1900px]:p-4 shrink-0">
             <svg class="absolute top-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
-                viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" stroke="white" />
-                <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" stroke="white" />
-                <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" stroke="white" />
+                viewBox="0 0 21 21" fill="none" stroke="#777" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.02344" y1="20.8894" x2="1.02344" y2="1.52345" />
+                <line x1="1.52344" y1="1.02344" x2="20.8894" y2="1.02344" />
+                <line x1="1.52344" y1="1.5" x2="1.00003" y2="1.5" />
             </svg>
             <svg class="absolute top-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
-                viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" stroke="white" />
-                <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" stroke="white" />
-                <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" stroke="white" />
+                viewBox="0 0 21 21" fill="none" stroke="#777" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0.109375" y1="1.02344" x2="19.4753" y2="1.02344" />
+                <line x1="19.9727" y1="1.52344" x2="19.9727" y2="20.8894" />
+                <line x1="19.5" y1="1.52344" x2="19.5" y2="1.00003" />
             </svg>
             <svg class="absolute bottom-0 left-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
-                viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" stroke="white" />
-                <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" stroke="white" />
-                <line x1="1.5" y1="19.4766" x2="1.5" y2="20" stroke="white" />
+                viewBox="0 0 21 21" fill="none" stroke="#777" xmlns="http://www.w3.org/2000/svg">
+                <line x1="20.8906" y1="19.9766" x2="1.52467" y2="19.9766" />
+                <line x1="1.02734" y1="19.4766" x2="1.02734" y2="0.110605" />
+                <line x1="1.5" y1="19.4766" x2="1.5" y2="20" />
             </svg>
             <svg class="absolute bottom-0 right-0 max-[648px]:w-3 max-[648px]:h-3" width="21" height="21"
-                viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" stroke="white" />
-                <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" stroke="white" />
-                <line x1="19.4766" y1="19.5" x2="20" y2="19.5" stroke="white" />
+                viewBox="0 0 21 21" fill="none" stroke="#777" xmlns="http://www.w3.org/2000/svg">
+                <line x1="19.9766" y1="0.110596" x2="19.9766" y2="19.4766" />
+                <line x1="19.4766" y1="19.9766" x2="0.110605" y2="19.9766" />
+                <line x1="19.4766" y1="19.5" x2="20" y2="19.5" />
             </svg>
             <div class="w-full h-full">
                 <img src="${aliens_data[i].url1}" class="w-full h-full object-cover" alt="">
@@ -1102,6 +1102,27 @@ function setUpAliensData() {
     updateHeroInfo(0)
 }
 setUpAliensData()
+
+function handleHeroSelectionBtns() {
+    document.querySelectorAll('.hero-selection-btns').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.hero-selection-btns svg').forEach(svg => {
+                svg.style.stroke = "#777";
+            });
+    
+            const btnElement = document.getElementById(btn.id);
+            const svgs = btnElement.querySelectorAll("svg")
+            svgs.forEach(svg => {
+                svg.style.stroke = "white"
+            })
+    
+            const audio = new Audio("assets/audio/hero_selected.mp3");
+            audio.play();
+        })
+    })
+}
+
+handleHeroSelectionBtns()
 
 // ------------------------------------------------------------------------------------------------
 // Series Section
