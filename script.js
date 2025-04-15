@@ -744,7 +744,7 @@ function setupParallaxEffect() {
         { element: heroImage1, factor: 0.015, mobileFactor: 0.55, transform: initialTransforms.heroImage1 },
         { element: heroImage2, factor: 0.01, mobileFactor: 0.48, transform: initialTransforms.heroImage2 },
         { element: heroImage3, factor: 0.02, mobileFactor: 0.42, transform: initialTransforms.heroImage3 },
-        { element: heroBg, factor: 0.03, mobileFactor: 0.45, transform: initialTransforms.heroBg }
+        { element: heroBg, factor: 0.03, mobileFactor: 0.25, transform: initialTransforms.heroBg }
     ];
 
     let isMobile = window.innerWidth < 768;
