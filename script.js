@@ -740,7 +740,7 @@ function handleCTAButtonAnimations(element) {
     ctaButton.addEventListener('mouseenter', function() {
         animate(svg.createDrawable(ctaButtonPath), {
             draw: ["0.5 0.5", "0 1"],
-            duration: 700,
+            duration: 900,
             delay: stagger(100),
             ease: 'inOutQuad'
         });
@@ -748,4 +748,5 @@ function handleCTAButtonAnimations(element) {
 }
 
 handleCTAButtonAnimations("#sign-in-button");
+handleCTAButtonAnimations("#hamburger-panel-sign-in-button")
 handleCTAButtonAnimations("#view-all-button");
