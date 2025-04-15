@@ -77,6 +77,7 @@
 
     <!-- main section -->
     <main class="w-full min-h-screen bg-zinc-900">
+        <!-- home page bg -->
         <div id="hero-bg-container" class="overflow-hidden absolute top-0 left-0 w-full h-screen">
             <img src="assets/images/hero_bg.jpg" alt="hero-bg"
                 class="scale-[1.15] w-full h-full object-cover object-center opacity-40" />
@@ -90,7 +91,7 @@
             <div data-vol="1" class="size-3 md:size-5 bg-[#F4940E] cursor-pointer hover:bg-white"></div>
         </div>
 
-        <!-- Hamburger Panel -->
+        <!-- Hamburger Panel(Only visible on mobile) -->
         <div id="hamburger-panel-container"
             class="translate-x-full z-10 xl:hidden fixed top-0 left-0 w-full h-dvh bg-[#D9D5D5]">
             <div id="hamburger-panel-content-container"
@@ -99,10 +100,12 @@
                     <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#">Home</a>
                     <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]"
                         href="#heroes-section">Heroes</a>
-                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#series-section">Series</a>
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]"
+                        href="#series-section">Series</a>
                     <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]"
                         href="#chronology-section">Chronology</a>
-                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]" href="#forum-section">Forum</a>
+                    <a class="font-[lexend] font-bold text-4xl sm:text-6xl uppercase text-[#73BB06]"
+                        href="#forum-section">Forum</a>
                 </div>
 
                 <!-- Sign In Button For Hamburger Panel -->
@@ -247,8 +250,10 @@
                 </div>
             </div>
         </section>
+        <!-- Hero Section End -->
 
-        <!-- Heroes Section -->
+
+        <!-- Heroes(Alien Showcase) Section -->
         <section id="heroes-section" class="w-full h-full bg-zinc-900">
             <!-- Header wireframe with SVG line and circles -->
             <div id="heroes-header-wireframe" class="px-2">
@@ -325,6 +330,8 @@
                 </div>
             </div>
         </section>
+        <!-- Heroes Section End -->
+
 
         <!-- Series Section -->
         <section id="series-section" class="w-full min-h-screen py-10">
@@ -345,9 +352,11 @@
                 </div>
             </div>
             <div id="series-container" class="w-full flex flex-col gap-4 px-5 sm:px-8 md:px-10 xl:px-12">
-                
+
             </div>
         </section>
+        <!-- Series Section End -->
+
 
         <!-- Chronology Section -->
         <section id="chronology-section" class="w-full min-h-screen">
@@ -1161,6 +1170,8 @@
             <!-- OV Storyline Section End -->
 
         </section>
+        <!-- Chronology Section End -->
+
 
         <!-- Forum Section -->
         <section id="forum-section" class="w-full min-h-screen bg-zinc-900 py-10">
@@ -1208,7 +1219,8 @@
                                     class="category-content relative hidden md:block p-4 pt-0 md:p-0 md:px-5">
                                     <div class="flex flex-col gap-2">
                                         <div class="flex justify-between items-center">
-                                            <p class="font-[ibm-plex-mono-400] text-white text-sm">General Discussion</p>
+                                            <p class="font-[ibm-plex-mono-400] text-white text-sm">General Discussion
+                                            </p>
                                             <p class="font-[lexend] font-light text-white/70 text-xs">1243 posts</p>
                                         </div>
                                         <div class="flex justify-between items-center">
@@ -1224,7 +1236,8 @@
                                             <p class="font-[lexend] font-light text-white/70 text-xs">742 posts</p>
                                         </div>
                                         <div class="flex justify-between items-center">
-                                            <p class="font-[ibm-plex-mono-400] text-white text-sm">Fan Art & Creation</p>
+                                            <p class="font-[ibm-plex-mono-400] text-white text-sm">Fan Art & Creation
+                                            </p>
                                             <p class="font-[lexend] font-light text-white/70 text-xs">435 posts</p>
                                         </div>
                                     </div>
@@ -1288,7 +1301,9 @@
 
                             <!-- Trending Discussion Header -->
                             <div class="mb-4 flex items-center">
-                                <h3 class="text-white uppercase text-base md:text-lg font-[jetbrains-mono] tracking-wider">Trending
+                                <h3
+                                    class="text-white uppercase text-base md:text-lg font-[jetbrains-mono] tracking-wider">
+                                    Trending
                                     Discussion</h3>
                             </div>
 
@@ -1305,14 +1320,17 @@
                                         </div>
                                         <div class="flex-1">
                                             <div class="flex justify-between items-start">
-                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">Which Ultimate
+                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">
+                                                    Which Ultimate
                                                     Alien is the strongest?</h4>
-                                                <span class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#F4940E] px-2 py-0.5 rounded-sm">Hot</span>
+                                                <span
+                                                    class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#F4940E] px-2 py-0.5 rounded-sm">Hot</span>
                                             </div>
                                             <p
                                                 class="w-full md:w-[80%] font-[inter] text-white/60 text-base md:text-lg mt-2 md:mt-4">
-                                                I think Ultimate Humungousaur has the most raw power<span class="hidden md:inline">, but Ultimate Echo
-                                                Echo has better versatility in combat situations.</span></p>
+                                                I think Ultimate Humungousaur has the most raw power<span
+                                                    class="hidden md:inline">, but Ultimate Echo
+                                                    Echo has better versatility in combat situations.</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1328,14 +1346,18 @@
                                         </div>
                                         <div class="flex-1">
                                             <div class="flex justify-between items-start">
-                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">Theory:
+                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">
+                                                    Theory:
                                                     Maltruant's true origin</h4>
-                                                <span class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#458CCF] px-2 py-0.5 rounded-sm">New</span>
+                                                <span
+                                                    class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#458CCF] px-2 py-0.5 rounded-sm">New</span>
                                             </div>
                                             <p
                                                 class="w-full md:w-[80%] font-[inter] text-white/60 text-base md:text-lg mt-2 md:mt-4">
-                                                After rewatching the Time War arc, I noticed some <span class="hidden md:inline"> clues about
-                                                    Maltruant's connection to Professor Paradox that might explain</span></p>
+                                                After rewatching the Time War arc, I noticed some <span
+                                                    class="hidden md:inline"> clues about
+                                                    Maltruant's connection to Professor Paradox that might
+                                                    explain</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1351,13 +1373,17 @@
                                         </div>
                                         <div class="flex-1">
                                             <div class="flex justify-between items-start">
-                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">Fan Art: My
+                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">Fan
+                                                    Art: My
                                                     redesign of Feedback</h4>
-                                                <span class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#67AC00] px-2 py-0.5 rounded-sm">Popular</span>
+                                                <span
+                                                    class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#67AC00] px-2 py-0.5 rounded-sm">Popular</span>
                                             </div>
                                             <p
                                                 class="w-full md:w-[80%] font-[inter] text-white/60 text-base md:text-lg mt-2 md:mt-4">
-                                                I've been working on this redesign for weeks<span class="hidden md:inline">, trying to combine elements from both the Omniverse and Ultimate Alien art styles.</span></p>
+                                                I've been working on this redesign for weeks<span
+                                                    class="hidden md:inline">, trying to combine elements from both the
+                                                    Omniverse and Ultimate Alien art styles.</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1373,11 +1399,17 @@
                                         </div>
                                         <div class="flex-1">
                                             <div class="flex justify-between items-start">
-                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">Could Alien X defeat all Celestialsapiens?</h4>
-                                                <span class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#F4940E] px-2 py-0.5 rounded-sm">Hot</span>
+                                                <h4 class="font-[inter] text-white font-medium text-lg md:text-2xl">
+                                                    Could Alien X defeat all Celestialsapiens?</h4>
+                                                <span
+                                                    class="hidden md:block font-[ibm-plex-mono-400] text-white text-[0.6rem] md:text-xs uppercase bg-[#F4940E] px-2 py-0.5 rounded-sm">Hot</span>
                                             </div>
                                             <p
-                                                class="w-full md:w-[80%] font-[inter] text-white/60 text-base md:text-lg mt-2 md:mt-4">Alien X is insanely powerful with reality-warping abilities<span class="hidden md:inline">, but considering all Celestialsapiens have similar power levels, it might come down to experience and inner consensus.</span></p>
+                                                class="w-full md:w-[80%] font-[inter] text-white/60 text-base md:text-lg mt-2 md:mt-4">
+                                                Alien X is insanely powerful with reality-warping abilities<span
+                                                    class="hidden md:inline">, but considering all Celestialsapiens have
+                                                    similar power levels, it might come down to experience and inner
+                                                    consensus.</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -1387,6 +1419,7 @@
                 </div>
             </div>
         </section>
+        <!-- Forum Section End -->
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@4.0.0/lib/anime.iife.min.js"></script>
