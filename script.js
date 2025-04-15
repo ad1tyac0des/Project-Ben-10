@@ -1497,7 +1497,7 @@ function sectionFadeUpAnimation(element) {
     gsap.from(container, {
         opacity: 0,
         y: 30,
-        duration: 0.6,
+        duration: 0.5,
         scrollTrigger: {
             trigger: container,
             start: "top 40%",
