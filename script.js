@@ -1361,3 +1361,31 @@ handleCTAButtonAnimations("#rate-now-button-0");
 handleCTAButtonAnimations("#rate-now-button-1");
 handleCTAButtonAnimations("#rate-now-button-2");
 handleCTAButtonAnimations("#rate-now-button-3");
+
+// ------------------------------------------------------------------------------------------------
+
+function handleHeaderWireframeAnimations() {
+    document.querySelectorAll('.header-wireframe').forEach((wireframe, index) => {
+        const path = wireframe.querySelector("svg path")
+
+        const pathLength = path.getTotalLength();
+
+        gsap.set(path, { strokeDasharray: pathLength })
+
+        gsap.fromTo(path, {
+            strokeDashoffset: pathLength
+        }, {
+            strokeDashoffset: 0,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: wireframe,
+                start: "top 50%",
+                end: "bottom bottom",
+                // markers: true,
+            }
+        })
+    })
+}
+
+handleHeaderWireframeAnimations();
