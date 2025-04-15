@@ -1,5 +1,7 @@
 const { animate, svg, createTimeline, stagger } = anime;
 
+// ------------------------------------------------------------------------------------------------
+// Preloader Section
 function setupPreloaderAnimations() {
     const tl = createTimeline({
         delay: 1000,
@@ -288,9 +290,11 @@ function setupSkipIntroInteractions(tl) {
         }
     });
 }
-
 // setupPreloaderAnimations();
 
+
+// ------------------------------------------------------------------------------------------------
+// Home Page(Hero Section)
 function setupHamburgerMenu() {
     const hamburgerMenuContainer = document.querySelector("#hamburger-menu-container");
     const hamburgerPanelContainer = document.querySelector("#hamburger-panel-container");
@@ -435,7 +439,6 @@ function setupHamburgerMenu() {
         toggleHamburgerMenuAnimation();
     });
 }
-setupHamburgerMenu();
 
 function setupAudioButton() {
     let isAudioPlaying = false;
@@ -549,8 +552,6 @@ function setupAudioButton() {
         });
     });
 }
-
-setupAudioButton();
 
 function enterFullScreen() {
     const elem = document.documentElement;
@@ -699,70 +700,14 @@ function setupParallaxEffect() {
     updateTransitionClasses();
 }
 
+setupHamburgerMenu();
+setupAudioButton();
 setupHeroSectionImages();
-
 setupParallaxEffect();
 
-function handleForumToggles() {
-    const categoriesHeader = document.getElementById('categories-header');
-    const categoriesArrow = document.getElementById('categories-arrow');
-    const categoriesContent = document.getElementById('categories-content');
 
-    if (categoriesHeader && categoriesContent && categoriesArrow) {
-        categoriesHeader.addEventListener('click', function () {
-            if (window.innerWidth < 768) {
-                categoriesContent.classList.toggle('hidden');
-                categoriesArrow.style.transform = categoriesContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-            }
-        });
-    }
-
-    // Toggle Stats on Mobile
-    const statsHeader = document.getElementById('stats-header');
-    const statsArrow = document.getElementById('stats-arrow');
-    const statsContent = document.getElementById('stats-content');
-
-    if (statsHeader && statsContent && statsArrow) {
-        statsHeader.addEventListener('click', function () {
-            if (window.innerWidth < 768) {
-                statsContent.classList.toggle('hidden');
-                statsArrow.style.transform = statsContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-            }
-        });
-    }
-
-    // Ensure content is visible on desktop regardless of toggle state
-    window.addEventListener('resize', function () {
-        if (window.innerWidth >= 768) {
-            const allCategoryContents = document.querySelectorAll('.category-content');
-            allCategoryContents.forEach(content => {
-                content.classList.remove('hidden');
-            });
-        }
-    });
-}
-handleForumToggles();
-
-function handleCTAButtonAnimations(element) {
-    const ctaButton = document.querySelector(element);
-    console.log(ctaButton);
-
-    const ctaButtonPath = document.querySelector(`${element} svg path`);
-
-    ctaButton.addEventListener('mouseenter', function() {
-        animate(svg.createDrawable(ctaButtonPath), {
-            draw: ["0.5 0.5", "0 1"],
-            duration: 900,
-            delay: stagger(100),
-            ease: 'inOutQuad'
-        });
-    });
-}
-handleCTAButtonAnimations("#sign-in-button");
-handleCTAButtonAnimations("#hamburger-panel-sign-in-button")
-handleCTAButtonAnimations("#view-all-button");
-
-// Heroes page script
+// ------------------------------------------------------------------------------------------------
+// Heroes Section
 const aliens_data = [
     {
         name: "Swampfire",
@@ -1158,7 +1103,9 @@ function setUpAliensData() {
 }
 setUpAliensData()
 
-function setupSeries() {
+// ------------------------------------------------------------------------------------------------
+// Series Section
+function setupSeriesSection() {
     const seriesData = [
         {
             header: "Classic",
@@ -1284,4 +1231,71 @@ function setupSeries() {
     })
 }
 
-setupSeries();
+setupSeriesSection();
+
+
+// ------------------------------------------------------------------------------------------------
+// Forum Section
+function handleForumToggles() {
+    const categoriesHeader = document.getElementById('categories-header');
+    const categoriesArrow = document.getElementById('categories-arrow');
+    const categoriesContent = document.getElementById('categories-content');
+
+    if (categoriesHeader && categoriesContent && categoriesArrow) {
+        categoriesHeader.addEventListener('click', function () {
+            if (window.innerWidth < 768) {
+                categoriesContent.classList.toggle('hidden');
+                categoriesArrow.style.transform = categoriesContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        });
+    }
+
+    // Toggle Stats on Mobile
+    const statsHeader = document.getElementById('stats-header');
+    const statsArrow = document.getElementById('stats-arrow');
+    const statsContent = document.getElementById('stats-content');
+
+    if (statsHeader && statsContent && statsArrow) {
+        statsHeader.addEventListener('click', function () {
+            if (window.innerWidth < 768) {
+                statsContent.classList.toggle('hidden');
+                statsArrow.style.transform = statsContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        });
+    }
+
+    // Ensure content is visible on desktop regardless of toggle state
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+            const allCategoryContents = document.querySelectorAll('.category-content');
+            allCategoryContents.forEach(content => {
+                content.classList.remove('hidden');
+            });
+        }
+    });
+}
+
+handleForumToggles();
+
+
+// ------------------------------------------------------------------------------------------------
+// CTA Button Animations
+function handleCTAButtonAnimations(element) {
+    const ctaButton = document.querySelector(element);
+    // console.log(ctaButton);
+
+    const ctaButtonPath = document.querySelector(`${element} svg path`);
+
+    ctaButton.addEventListener('mouseenter', function() {
+        animate(svg.createDrawable(ctaButtonPath), {
+            draw: ["0.5 0.5", "0 1"],
+            duration: 900,
+            delay: stagger(100),
+            ease: 'inOutQuad'
+        });
+    });
+}
+
+handleCTAButtonAnimations("#sign-in-button");
+handleCTAButtonAnimations("#hamburger-panel-sign-in-button")
+handleCTAButtonAnimations("#view-all-button");
