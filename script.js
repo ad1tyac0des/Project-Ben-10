@@ -1241,6 +1241,57 @@ setupSeriesSection();
 
 
 // ------------------------------------------------------------------------------------------------
+// Chronology Section
+function chronologyAnimations() {
+    document.querySelectorAll('.left-card').forEach((card, index) => {
+        gsap.from(card, {
+            opacity: 0,
+            x: -30,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 50%",
+                end: "top 30%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+
+    document.querySelectorAll('.right-card').forEach((card, index) => {
+        gsap.from(card, {
+            opacity: 0,
+            x: 30,
+            duration: 0.6,
+            delay: window.innerWidth < 768 ? 0 : 0.35,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 40%",
+                end: "top 20%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+
+    document.querySelectorAll('.last-image').forEach((card, index) => {
+        gsap.from(card, {
+            opacity: 0,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 40%",
+                end: "top 20%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+}
+
+chronologyAnimations();
+
+// ------------------------------------------------------------------------------------------------
 // Forum Section
 function handleForumToggles() {
     const categoriesHeader = document.getElementById('categories-header');
