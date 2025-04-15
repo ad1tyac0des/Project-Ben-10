@@ -10,6 +10,18 @@ function setupLenis() {
 }
 setupLenis();
 
+function enterFullScreen() {
+    const elem = document.documentElement;
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { // Safari
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}
+
 function setupSeriesAnimations() {
     document.querySelectorAll('.left-series').forEach((series) => {
         gsap.from(series, {
@@ -374,10 +386,25 @@ function setupPreloaderAnimations() {
         );
 
     // after load complete, resume timeline on click or press space/enter button
-    document.addEventListener("click", () => tl.paused && tl.resume());
+    document.addEventListener("click", () => {
+        if (tl.paused) {
+            tl.resume();
+            
+            if (window.innerWidth > 768 && window.innerHeight < 850) {
+                enterFullScreen();
+            }
+        }
+    });
 
     document.addEventListener("keydown", (e) => {
-        if (tl.paused && (e.code === "Space" || e.code === "Enter")) tl.resume();
+        if (tl.paused && (e.code === "Space" || e.code === "Enter")) {
+            tl.resume();
+
+            if (window.innerWidth > 768 && window.innerHeight < 850) {
+                enterFullScreen();
+            }
+        }
+        
         if (e.code === "Space") {
             animate("#info-text-container span", {
                 backgroundColor: ["#000", "#fff"],
@@ -389,7 +416,7 @@ function setupPreloaderAnimations() {
     });
 
     if (window.innerWidth <= 768) {
-        document.querySelector("#info-text").innerHTML = "Click to Enter";
+        document.querySelector("#info-text").innerHTML = "Tap to Enter";
     }
 
     setupSkipIntroInteractions(tl);
@@ -676,18 +703,6 @@ function setupAudioButton() {
         e.stopPropagation();
         toggleAudioIndicator();
     });
-}
-
-function enterFullScreen() {
-    const elem = document.documentElement;
-
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { // Safari
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { // IE/Edge
-        elem.msRequestFullscreen();
-    }
 }
 
 function setupHeroSectionImages() {
