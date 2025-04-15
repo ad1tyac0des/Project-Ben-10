@@ -1160,7 +1160,7 @@ function setupSeriesSection() {
     seriesContainer.innerHTML = seriesData.map((item, index) => {
         return (
             `
-            <div class="series-card flex justify-start  ${index % 2 === 0 ? 'justify-start' : 'justify-end'}">
+            <div class="series-card flex ${index % 2 === 0 ? 'justify-start left-series' : 'justify-end right-series'}">
                         <div 
                             class="series w-full xl:w-[80%] min-h-[600px] md:min-h-[400px] bg-[#151515] p-2 sm:p-4 xl:p-8 flex flex-col md:flex-row gap-8 md:gap-10 xl:gap-20 border border-zinc-600 ">
     
@@ -1237,12 +1237,46 @@ function setupSeriesSection() {
     })
 }
 
+function setupSeriesAnimations() {
+    document.querySelectorAll('.left-series').forEach((series) => {
+        gsap.from(series, {
+            opacity: 0,
+            x: -30,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: series,
+                start: "top 50%",
+                end: "top 30%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+
+    document.querySelectorAll('.right-series').forEach((series) => {
+        gsap.from(series, {
+            opacity: 0,
+            x: 30,
+            duration: 0.6,
+            delay: window.innerWidth < 768 ? 0 : 0.35,
+            scrollTrigger: {
+                trigger: series,
+                start: "top 40%",
+                end: "top 20%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+}
+
 setupSeriesSection();
+setupSeriesAnimations();
 
 
 // ------------------------------------------------------------------------------------------------
 // Chronology Section
-function chronologyAnimations() {
+function setupChronologyAnimations() {
     document.querySelectorAll('.left-card').forEach((card, index) => {
         gsap.from(card, {
             opacity: 0,
@@ -1289,7 +1323,7 @@ function chronologyAnimations() {
     });
 }
 
-chronologyAnimations();
+setupChronologyAnimations();
 
 // ------------------------------------------------------------------------------------------------
 // Forum Section
