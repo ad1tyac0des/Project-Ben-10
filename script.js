@@ -289,7 +289,7 @@ function setupSkipIntroInteractions(tl) {
     });
 }
 
-setupPreloaderAnimations();
+// setupPreloaderAnimations();
 
 function setupHamburgerMenu() {
     const hamburgerMenuContainer = document.querySelector("#hamburger-menu-container");

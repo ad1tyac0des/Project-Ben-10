@@ -131,8 +131,29 @@ img {
     }
 }
 
+#heroes-images {
+    padding-right: 15px;
+}
+
 #heroes-images::-webkit-scrollbar {
-    display: none;
+    width: 2px;
+    background-color: #5B5B5B;
+}
+
+#heroes-images::-webkit-scrollbar-thumb {
+    background-color: #83DB00;
+}
+
+@media (max-width: 768px) {
+    #heroes-images {
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+    
+    #heroes-images::-webkit-scrollbar {
+        width: auto;
+        height: 1px;
+    }
 }
 
 .hero-info-image-label,
