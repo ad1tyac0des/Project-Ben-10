@@ -442,11 +442,12 @@ function setupAudioButton() {
     let isIndicatorActive = false;
     let clickCount = 1;
     let fadeIntervalRef = null;
-    const maxVolume = 0.1;
+    let maxVolume = 0.3; 
 
     const audioButton = document.getElementById("audio-button");
     const audioElement = document.getElementById("audio-element");
     const indicatorLines = document.querySelectorAll(".indicator-line");
+    const volumeButtons = document.querySelectorAll('#volume-control div');
 
     // Main Function which plays the line animation and calls all the audio play/pause functions
     function toggleAudioIndicator() {
@@ -474,12 +475,10 @@ function setupAudioButton() {
     function fadeInAudio() {
         if (!audioElement) return;
 
-        // [safety check] Clear existing fade interval (if any)
         if (fadeIntervalRef) {
             clearInterval(fadeIntervalRef);
         }
 
-        // Play the audio(ensure volume is set to 0 first)
         audioElement.volume = 0;
         audioElement.play();
 
@@ -488,7 +487,6 @@ function setupAudioButton() {
                 audioElement.volume = Math.min(audioElement.volume + 0.1, maxVolume);
             } else {
                 audioElement.volume = maxVolume;
-                // After volume reached its max, stop the fadeInterval
                 clearInterval(fadeIntervalRef);
                 fadeIntervalRef = null;
             }
@@ -507,10 +505,8 @@ function setupAudioButton() {
             if (audioElement.volume > 0.01) {
                 audioElement.volume = Math.max(audioElement.volume - 0.1, 0);
             } else {
-                // Pause the audio(ensure volume is set to 0 first)
                 audioElement.volume = 0;
                 audioElement.pause();
-                // After audio is paused, stop the fadeInterval
                 clearInterval(fadeIntervalRef);
                 fadeIntervalRef = null;
             }
@@ -534,10 +530,26 @@ function setupAudioButton() {
 
     // Play or pause audio on clicking audio btn
     audioButton.addEventListener("click", (e) => {
-        e.stopPropagation(); // prevent document click from firing
+        e.stopPropagation();
         toggleAudioIndicator();
     });
+
+    //  Volume pieces logic
+    volumeButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const vol = parseFloat(e.target.getAttribute("data-vol"));
+            if (!isNaN(vol)) {
+                maxVolume = vol;
+
+                // If audio already playing, adjust volume instantly
+                if (audioElement && !audioElement.paused) {
+                    audioElement.volume = maxVolume;
+                }
+            }
+        });
+    });
 }
+
 setupAudioButton();
 
 function enterFullScreen() {

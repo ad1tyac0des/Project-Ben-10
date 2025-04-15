@@ -82,6 +82,14 @@
                 class="scale-[1.15] w-full h-full object-cover object-center opacity-40" />
         </div>
 
+        <!-- volume control pieces -->
+        <div id="volume-control" class="fixed bottom-5 right-2 md:right-3 flex flex-col gap-2 z-50">
+            <div data-vol="0.1" class="size-3 md:size-5 bg-[#D9B800] cursor-pointer hover:bg-white"></div>
+            <div data-vol="0.3" class="size-3 md:size-5 bg-[#67AC00] cursor-pointer hover:bg-white"></div>
+            <div data-vol="0.6" class="size-3 md:size-5 bg-[#458CCF] cursor-pointer hover:bg-white"></div>
+            <div data-vol="1" class="size-3 md:size-5 bg-[#F4940E] cursor-pointer hover:bg-white"></div>
+        </div>
+
         <div id="hamburger-panel-container"
             class="translate-x-full z-10 xl:hidden fixed top-0 left-0 w-full h-dvh bg-[#D9D5D5]">
             <div id="hamburger-panel-content-container"
