@@ -730,3 +730,22 @@ function handleForumToggles() {
 }
 
 handleForumToggles();
+
+function handleCTAButtonAnimations(element) {
+    const ctaButton = document.querySelector(element);
+    console.log(ctaButton);
+
+    const ctaButtonPath = document.querySelector(`${element} svg path`);
+
+    ctaButton.addEventListener('mouseenter', function() {
+        animate(svg.createDrawable(ctaButtonPath), {
+            draw: ["0.5 0.5", "0 1"],
+            duration: 700,
+            delay: stagger(100),
+            ease: 'inOutQuad'
+        });
+    });
+}
+
+handleCTAButtonAnimations("#sign-in-button");
+handleCTAButtonAnimations("#view-all-button");
