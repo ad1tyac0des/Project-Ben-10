@@ -133,6 +133,13 @@ img {
 
 #heroes-images {
     padding-right: 15px;
+    scroll-snap-type: y proximity;
+}
+
+#heroes-images>div {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    cursor: pointer;
 }
 
 #heroes-images::-webkit-scrollbar {
