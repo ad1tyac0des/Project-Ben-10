@@ -1368,63 +1368,6 @@ function handleForumToggles() {
 
 handleForumToggles();
 
-
-// ------------------------------------------------------------------------------------------------
-// CTA Button Animations
-function handleCTAButtonAnimations(element) {
-    const ctaButton = document.querySelector(element);
-    // console.log(ctaButton);
-
-    const ctaButtonPath = document.querySelector(`${element} svg path`);
-
-    ctaButton.addEventListener('mouseenter', function() {
-        animate(svg.createDrawable(ctaButtonPath), {
-            draw: ["0.5 0.5", "0 1"],
-            duration: 900,
-            delay: stagger(100),
-            ease: 'inOutQuad'
-        });
-    });
-}
-
-handleCTAButtonAnimations("#sign-in-button");
-handleCTAButtonAnimations("#hamburger-panel-sign-in-button")
-handleCTAButtonAnimations("#view-all-button");
-handleCTAButtonAnimations("#know-more-button");
-handleCTAButtonAnimations("#rate-now-button-0");
-handleCTAButtonAnimations("#rate-now-button-1");
-handleCTAButtonAnimations("#rate-now-button-2");
-handleCTAButtonAnimations("#rate-now-button-3");
-
-// ------------------------------------------------------------------------------------------------
-// Header Wireframe Animation
-function handleHeaderWireframeAnimations() {
-    document.querySelectorAll('.header-wireframe').forEach((wireframe, index) => {
-        const path = wireframe.querySelector("svg path")
-
-        const pathLength = path.getTotalLength();
-
-        gsap.set(path, { strokeDasharray: pathLength })
-
-        gsap.fromTo(path, {
-            strokeDashoffset: pathLength
-        }, {
-            strokeDashoffset: 0,
-            duration: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: wireframe,
-                start: "top 50%",
-                end: "bottom bottom",
-                // markers: true,
-            }
-        })
-    })
-}
-
-handleHeaderWireframeAnimations();
-
-
 // ------------------------------------------------------------------------------------------------
 //Footer Text Animation
 function handleFooterTextAnimation() {
@@ -1489,3 +1432,81 @@ function handleFooterTextAnimation() {
     footerSection.addEventListener('mouseleave', handleMouseLeave);
 }
 handleFooterTextAnimation();
+
+
+// ------------------------------------------------------------------------------------------------
+// CTA Button Animations
+function handleCTAButtonAnimations(element) {
+    const ctaButton = document.querySelector(element);
+    // console.log(ctaButton);
+
+    const ctaButtonPath = document.querySelector(`${element} svg path`);
+
+    ctaButton.addEventListener('mouseenter', function() {
+        animate(svg.createDrawable(ctaButtonPath), {
+            draw: ["0.5 0.5", "0 1"],
+            duration: 900,
+            delay: stagger(100),
+            ease: 'inOutQuad'
+        });
+    });
+}
+
+handleCTAButtonAnimations("#sign-in-button");
+handleCTAButtonAnimations("#hamburger-panel-sign-in-button")
+handleCTAButtonAnimations("#view-all-button");
+handleCTAButtonAnimations("#know-more-button");
+handleCTAButtonAnimations("#rate-now-button-0");
+handleCTAButtonAnimations("#rate-now-button-1");
+handleCTAButtonAnimations("#rate-now-button-2");
+handleCTAButtonAnimations("#rate-now-button-3");
+
+// ------------------------------------------------------------------------------------------------
+// Header Wireframe Animation
+function handleHeaderWireframeAnimations() {
+    document.querySelectorAll('.header-wireframe').forEach((wireframe, index) => {
+        const path = wireframe.querySelector("svg path")
+
+        const pathLength = path.getTotalLength();
+
+        gsap.set(path, { strokeDasharray: pathLength })
+
+        gsap.fromTo(path, {
+            strokeDashoffset: pathLength
+        }, {
+            strokeDashoffset: 0,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: wireframe,
+                start: "top 50%",
+                end: "bottom bottom",
+                // markers: true,
+            }
+        })
+    })
+}
+
+handleHeaderWireframeAnimations();
+
+// ------------------------------------------------------------------------------------------------
+// Section Fade Up Animation
+function sectionFadeUpAnimation(element) {
+    const container = document.querySelector(element);
+    
+    gsap.from(container, {
+        opacity: 0,
+        y: 30,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: container,
+            start: "top 40%",
+            end: "top 20%",
+            // scrub: true,
+            // markers: true
+        }
+    });
+}
+
+sectionFadeUpAnimation("#heroes-content");
+sectionFadeUpAnimation("#main-forum-container");
