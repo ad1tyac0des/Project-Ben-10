@@ -689,3 +689,44 @@ function setupParallaxEffect() {
 setupHeroSectionImages();
 
 setupParallaxEffect();
+
+function handleForumToggles() {
+    const categoriesHeader = document.getElementById('categories-header');
+    const categoriesArrow = document.getElementById('categories-arrow');
+    const categoriesContent = document.getElementById('categories-content');
+
+    if (categoriesHeader && categoriesContent && categoriesArrow) {
+        categoriesHeader.addEventListener('click', function () {
+            if (window.innerWidth < 768) {
+                categoriesContent.classList.toggle('hidden');
+                categoriesArrow.style.transform = categoriesContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        });
+    }
+
+    // Toggle Stats on Mobile
+    const statsHeader = document.getElementById('stats-header');
+    const statsArrow = document.getElementById('stats-arrow');
+    const statsContent = document.getElementById('stats-content');
+
+    if (statsHeader && statsContent && statsArrow) {
+        statsHeader.addEventListener('click', function () {
+            if (window.innerWidth < 768) {
+                statsContent.classList.toggle('hidden');
+                statsArrow.style.transform = statsContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        });
+    }
+
+    // Ensure content is visible on desktop regardless of toggle state
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+            const allCategoryContents = document.querySelectorAll('.category-content');
+            allCategoryContents.forEach(content => {
+                content.classList.remove('hidden');
+            });
+        }
+    });
+}
+
+handleForumToggles();
