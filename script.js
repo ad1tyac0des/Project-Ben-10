@@ -289,7 +289,7 @@ function setupSkipIntroInteractions(tl) {
     });
 }
 
-// setupPreloaderAnimations();
+setupPreloaderAnimations();
 
 function setupHamburgerMenu() {
     const hamburgerMenuContainer = document.querySelector("#hamburger-menu-container");
@@ -1032,7 +1032,7 @@ function updateHeroInfo(index) {
             <h1
                 class="w-fit h-fit bg-[#333333] text-[#727272] py-[.1rem] px-2 md:px-4 tracking-wider font-[inter] uppercase text-xs md:text-base">
                 About</h1>
-            <p class="font-[ibm-plex-mono-400] text-[#CDCDCD] text-[0.85rem] md:text-base xl:text-lg leading-tight md:leading-5 mt-5 xl:mt-8 w-[95%] h-[5rem] xl:h-[6rem] md:w-[80%]">
+            <p class="font-[ibm-plex-mono-400] text-[#CDCDCD] text-[0.85rem] md:text-base xl:text-lg leading-tight md:leading-5 mt-5 xl:mt-8 w-[95%] h-[5rem] xl:h-[6rem] min-[1900px]:h-[4rem] md:w-[80%]">
                 ${aliens_data[index].about}
             </p>
         </div>
