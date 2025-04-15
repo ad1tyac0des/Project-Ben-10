@@ -403,12 +403,12 @@ function setupHamburgerMenu() {
             ).add(
                 "#hamburger-panel-links a",
                 {
-                x: isOpen ? ["0", "100"] : ["100", "0"],
-                opacity: isOpen ? ["1", "0"] : ["0", "1"],
-                duration: 400,
-                delay: stagger(30),
-                ease: "inOutSine",
-            },
+                    x: isOpen ? ["0", "100"] : ["100", "0"],
+                    opacity: isOpen ? ["1", "0"] : ["0", "1"],
+                    duration: 400,
+                    delay: stagger(30),
+                    ease: "inOutSine",
+                },
                 "<<"
             ).add(
                 "#hamburger-panel-sign-in-button",
@@ -689,3 +689,132 @@ function setupParallaxEffect() {
 setupHeroSectionImages();
 
 setupParallaxEffect();
+
+
+function setupSeries() {
+    const seriesData = [
+        {
+            header: "Classic",
+            para: "10-year-old Ben Tennyson finds the Omnitrix, a device that transforms him into powerful aliens. Alongside Gwen and Grandpa Max, he battles villains and uncovers the watch’s secrets on a summer road trip.",
+            sequels: "2005-2008",
+            season: '4',
+            episodes: '52',
+            stars: "4",
+            visit: '11',
+            seriesImgUrl: "assets/images/series_images/classic_banner.jpg"
+        },
+        {
+            header: "ALIEN FORCE",
+            para: "Five years later, a now-teenaged Ben reunites with Gwen and former foe Kevin to fight the Highbreed, an alien race plotting Earth’s destruction. Leading a team, Ben wields the Omnitrix to stop invasions, uncover conspiracies, and grow into a more responsible hero.",
+            sequels: "2008-2010",
+            season: '3',
+            episodes: '46',
+            stars: "6",
+            visit: '15',
+            seriesImgUrl: "assets/images/series_images/af_banner.webp"
+        },
+        {
+            header: "ULTIMATE ALIEN ",
+            para: "Ben, now 16, gains the Ultimatrix, an evolved Omnitrix that lets him upgrade his aliens into ultimate forms. Facing powerful enemies like Aggregor and a fame-hungry public, he navigates new challenges, balancing heroism with the pressures of his exposed identity.",
+            sequels: "2010-2012",
+            season: '3',
+            episodes: '52',
+            stars: "10",
+            visit: '14',
+            seriesImgUrl: "assets/images/series_images/ua_banner.webp"
+        },
+        {
+            header: "OMNIVERSE",
+            para: "Ben, partnered with rookie alien Plumber Rook, explores a multiverse of alien worlds and timelines. With a redesigned Omnitrix, he battles foes like Khyber and Malware, blending humor, teamwork, and wild adventures across dimensions.",
+            sequels: "2012-2014",
+            season: '8',
+            episodes: '80',
+            stars: "7",
+            visit: '8',
+            seriesImgUrl: "assets/images/series_images/ov_banner.jpg"
+        },
+    ]
+    
+    const seriesContainer = document.getElementById('series-container');
+    
+    seriesContainer.innerHTML = seriesData.map((item, index) => {
+        return (
+            `
+            <div class="series-card flex justify-start  ${index % 2 === 0 ? 'justify-start' : 'justify-end'}">
+                        <div 
+                            class="series w-full xl:w-[80%] min-h-[600px] md:min-h-[400px] bg-[#151515] p-2 sm:p-4 xl:p-8 flex flex-col md:flex-row gap-8 md:gap-10 xl:gap-20 border border-zinc-600 ">
+    
+                            <div class="series-thumbnail w-full h-[300px] md:w-[40%] md:h-[59vh] xl:h-[80vh] overflow-hidden">
+                                <img src="${item.seriesImgUrl}" class="w-full h-full object-cover"
+                                    alt="">
+                            </div>
+    
+                            <div class="series-info w-full  md:w-[60%]   flex flex-col  justify-between ">
+                                <div class="series-info-top  w-full h-[40%] flex flex-col gap-14">
+                                    <div class="series-info-top-part1 flex flex-col gap-8">
+                                        <div class="series-header flex justify-between items-center ">
+                                            <h1
+                                                class="uppercase font-[jetbrains-mono] font-light text-2xl md:text-3xl xl:text-4xl text-white lead">
+                                                ${item.header}
+                                            </h1>
+                                            <div class="flex items-center gap-2">
+                                                <p
+                                                    class="w-16 md:w-20 text-center py-[.15rem] text-sm sm:text-base md:text-lg text-white bg-[#2D2D2D] font-[lexend] font-light cursor-pointer">
+                                                     ${item.visit}M <i class="ri-eye-line"></i></p>
+                                                <p
+                                                    class="w-16 md:w-20 text-center py-[.15rem] text-sm sm:text-base md:text-lg text-white bg-[#2D2D2D] font-[lexend] font-light cursor-pointer">
+                                                    ${item.stars}M<i class="ri-star-fill text-yellow-400"></i></p>
+                                            </div>
+                                        </div>
+                                        <div class="series-para w-[97%] md:w-[80%]">
+                                            <p
+                                                class="font-[ibm-plex-mono-400] text-base md:text-lg xl:text-xl leading-5 md:leading-[1.30rem] xl:leading-6 text-[#7F7D7D]">
+                                            ${item.para}</p>
+                                        </div>
+                                    </div>
+                                    <div class="series-info-top-part2 flex gap-16">
+                                        <div class="leading-loose flex flex-col gap-2">
+                                            <h1 class="font-[inter] text-base md:text-lg text-white font-light">SEQUELS</h1>
+                                            <h1 class="font-[inter] text-base md:text-lg text-white font-light">SEASONS
+                                            </h1>
+                                            <h1 class="font-[inter] text-base md:text-lg text-white font-light">EPISODES
+                                            </h1>
+    
+                                        </div>
+                                        <div class="leading-loose flex flex-col gap-2">
+                                            <p class="font-[lexend] text-base md:text-base text-white font-light ">${item.sequels}
+                                            </p>
+                                            <p class="font-[lexend] text-base md:text-base text-white font-light ">${item.season}</p>
+                                            <p class="font-[lexend] text-base md:text-base text-white font-light ">${item.episodes}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="series-info-bottom  w-full flex  justify-between items-center mt-8 md:mt-0 ">
+                                    <div id="rate-now-button"
+                                        class="relative  w-[8rem] h-[2.2rem] 2xl:w-[10rem] 2xl:h-[2.5rem] 2xl:bottom-0  cursor-pointer ">
+                                        <svg class="w-full h-full" viewBox="0 0 178 56" fill="none"
+                                            preserveAspectRatio="none">
+                                            <path d="M161 56H1V2H175V30" stroke="white" />
+                                        </svg>
+                                        <p
+                                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white w-full text-center font-[lexend] font-normal uppercase text-xs 2xl:text-sm">
+                                            Rate Now <i class="ri-star-fill text-yellow-400 ml-2"></i>
+    
+                                        </p>
+                                    </div>
+    
+                                    <p
+                                        class="px-4 md:px-6 text-center py-[.2rem] md:py-[.3rem] text-base md:text-base text-white bg-[#2D2D2D] font-[lexend] font-light cursor-pointer">
+                                        See All
+                                        <i class="ri-arrow-right-line text-white mt-4"></i>
+                                    </p>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+        )
+    })
+}
+
+setupSeries();
