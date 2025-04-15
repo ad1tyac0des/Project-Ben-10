@@ -899,8 +899,8 @@ const aliens_data = [
             Control: 85
         },
         about: "A Methanosian from Methanos, Swampfire blends fire and plant powers with a knack for regeneration.",
-        url1: "/assets/images/alien_images/swampfire.jpg",
-        url2: "/assets/images/alien_images/swampfire_af.png",
+        url1: "assets/images/alien_images/swampfire.jpg",
+        url2: "assets/images/alien_images/swampfire_af.png",
     },
     {
         name: "Heatblast",
@@ -925,8 +925,8 @@ const aliens_data = [
             Control: 80
         },
         about: "A fiery Pyronite from the star Pyros, Heatblast wields intense flames and molten rock, capable of both destruction and flight.",
-        url1: "/assets/images/alien_images/heatblast.jpg",
-        url2: "/assets/images/alien_images/heatblast_os.png"
+        url1: "assets/images/alien_images/heatblast.jpg",
+        url2: "assets/images/alien_images/heatblast_os.png"
     },
     {
         name: "Diamondhead",
@@ -951,8 +951,8 @@ const aliens_data = [
             Control: 90
         },
         about: "A durable Petrosapien from Petropia, Diamondhead uses crystalline strength and sharp projectiles to dominate battles.",
-        url1: "/assets/images/alien_images/diamondhead.jpg",
-        url2: "/assets/images/alien_images/Diamondhead_os.png"
+        url1: "assets/images/alien_images/diamondhead.jpg",
+        url2: "assets/images/alien_images/Diamondhead_os.png"
     },
     {
         name: "XLR8",
@@ -977,8 +977,8 @@ const aliens_data = [
             Control: 85
         },
         about: "A lightning-fast Kineceleran from Kinet, XLR8 races through challenges with unmatched speed and agility.",
-        url1: "/assets/images/alien_images/xlr8.jpg",
-        url2: "/assets/images/alien_images/xlr8_os.png"
+        url1: "assets/images/alien_images/xlr8.jpg",
+        url2: "assets/images/alien_images/xlr8_os.png"
     },
     {
         name: "Four Arms",
@@ -1003,8 +1003,8 @@ const aliens_data = [
             Control: 75
         },
         about: "A towering Tetramand from Khoros, Four Arms uses his immense strength and four fists to overpower enemies.",
-        url1: "/assets/images/alien_images/fourarms.jpg",
-        url2: "/assets/images/alien_images/fourarms_os.png"
+        url1: "assets/images/alien_images/fourarms.jpg",
+        url2: "assets/images/alien_images/fourarms_os.png"
     },
     {
         name: "Upgrade",
@@ -1029,8 +1029,8 @@ const aliens_data = [
             Control: 90
         },
         about: "A versatile Galvanic Mechamorph from Galvan B, Upgrade merges with tech to enhance or reshape it.",
-        url1: "/assets/images/alien_images/upgrade.png",
-        url2: "/assets/images/alien_images/upgrade_os.webp"
+        url1: "assets/images/alien_images/upgrade.png",
+        url2: "assets/images/alien_images/upgrade_os.webp"
     },
     {
         name: "Big Chill",
@@ -1055,8 +1055,8 @@ const aliens_data = [
             Control: 80
         },
         about: "A Necrofriggian from Kylmyys, Big Chill freezes foes with icy breath and phases through obstacles.",
-        url1: "/assets/images/alien_images/bigchill.jpg",
-        url2: "/assets/images/alien_images/bigchill_af.webp"
+        url1: "assets/images/alien_images/bigchill.jpg",
+        url2: "assets/images/alien_images/bigchill_af.webp"
     },
     {
         name: "Chromastone",
@@ -1081,8 +1081,8 @@ const aliens_data = [
             Control: 85
         },
         about: "A Crystalsapien from Petropia, Chromastone absorbs energy and unleashes it as powerful light.",
-        url1: "/assets/images/alien_images/chromastone.jpg",
-        url2: "/assets/images/alien_images/chromastone_af.png"
+        url1: "assets/images/alien_images/chromastone.jpg",
+        url2: "assets/images/alien_images/chromastone_af.png"
     },
     {
         name: "Feedback",
@@ -1107,8 +1107,8 @@ const aliens_data = [
             Control: 85
         },
         about: "A Conductoid from Teslavorr, Feedback absorbs and redirects energy with tendril precision.",
-        url1: "/assets/images/alien_images/feedback.jpg",
-        url2: "/assets/images/alien_images/feedback_ov.webp"
+        url1: "assets/images/alien_images/feedback.jpg",
+        url2: "assets/images/alien_images/feedback_ov.webp"
     },
     {
         name: "Alien X",
@@ -1133,8 +1133,8 @@ const aliens_data = [
             Control: 30
         },
         about: "A Celestialsapien from the Forge of Creation, Alien X wields ultimate power, limited by internal debate.",
-        url1: "/assets/images/alien_images/alienX.webp",
-        url2: "/assets/images/alien_images/alienX_af.png"
+        url1: "assets/images/alien_images/alienX.webp",
+        url2: "assets/images/alien_images/alienX_af.png"
     },
 ]
 
