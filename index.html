@@ -246,11 +246,80 @@
             </div>
         </section>
 
-        <section id="heroes-section" class="w-full h-screen bg-zinc-900">
-            <div class="w-full h-full flex items-center justify-center">
-                <h1 class="text-white text-4xl font-[lexend] font-extrabold uppercase">
-                    Heroes
-                </h1>
+        <section id="heroes-section" class="w-full h-full bg-zinc-900">
+            <!-- Header wireframe with SVG line and circles -->
+            <div id="heroes-header-wireframe" class="px-2">
+                <svg class="w-full h-auto" viewBox="0 0 1698 99" fill="none">
+                    <!-- Diagonal line with circles at endpoints -->
+                    <path d="M5 94L52.9858 47.9107H1632.02L1693 5" class="stroke-white stroke-2 md:stroke-1" />
+                    <circle cx="1693" cy="5" r="5" fill="white" />
+                    <circle cx="5" cy="94" r="5" fill="white" />
+                </svg>
+            </div>
+            <!-- Section heading with title and square decoration -->
+            <div id="heroes-heading"
+                class="flex flex-row items-end relative gap-5 md:gap-10 xl:gap-16 leading-none mt-2 px-5 sm:px-8 md:px-10 xl:px-12 mb-6 xl:mb-10">
+                <h1
+                    class="text-[2.4rem] sm:text-6xl md:text-7xl xl:text-8xl min-[1900px]:text-9xl uppercase font-[lexend] text-[#83DB00]">
+                    Heroes</h1>
+                <div class="pb-1.5 md:pb-2 xl:pb-3 min-[1900px]:pb-4">
+                    <div class="square size-2 md:size-3 xl:size-4 bg-[#83DB00]"></div>
+                </div>
+            </div>
+            <!-- Main content area with images and info -->
+            <div id="heroes-content"
+                class="w-full h-fit md:h-[75vh] lg:h-[90vh] xl:h-full flex flex-col-reverse md:flex-row md:justify-between p-2 pb-5 md:pb-0 md:px-4 lg:p-10 min-[1900px]:p-16 gap-6">
+                <!-- Image gallery with scrollable hero images -->
+                <div id="heroes-images"
+                    class="flex md:flex-col gap-5 md:gap-4 w-full h-fit md:w-fit md:h-full overflow-hidden overflow-x-auto md:overflow-y-auto">
+
+                </div>
+                <!-- Hero information panel -->
+                <div id="heroes-info"
+                    class="w-full h-full md:w-[80%] relative bg-[#212121] flex flex-col-reverse md:flex-row overflow-hidden gap-8 lg:justify-between xl:gap-40 p-4 md:p-4 ">
+                    <!-- Corner SVG decorations -->
+                    <svg class="absolute top-0 left-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.15625" y1="23" x2="1.15625" y2="1.57895" stroke="white" />
+                        <line x1="1.65625" y1="1.07886" x2="25.9984" y2="1.07886" stroke="white" />
+                        <line x1="1.65625" y1="1.5" x2="0.998355" y2="1.5" stroke="white" />
+                    </svg>
+                    <svg class="absolute top-0 right-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="21.4211" y2="-0.5" transform="matrix(0 -1 -1 0 24.3438 23)"
+                            stroke="white" />
+                        <line y1="-0.5" x2="24.3421" y2="-0.5" transform="matrix(-1 0 0 1 24.3438 1.57886)"
+                            stroke="white" />
+                        <line y1="-0.5" x2="0.657895" y2="-0.5" transform="matrix(1 0 0 -1 24.3438 1)" stroke="white" />
+                    </svg>
+                    <svg class="absolute bottom-0 right-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="24.8438" x2="24.8438" y2="21.4211" stroke="white" />
+                        <line x1="24.3438" y1="21.9211" x2="0.00164413" y2="21.9211" stroke="white" />
+                        <line x1="24.3438" y1="21.5" x2="25.0016" y2="21.5" stroke="white" />
+                    </svg>
+                    <svg class="absolute bottom-0 left-0" width="26" height="23" viewBox="0 0 26 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="-0.5" x2="21.4211" y2="-0.5" transform="matrix(0 1 1 0 1.65625 0)" stroke="white" />
+                        <line y1="-0.5" x2="24.3421" y2="-0.5" transform="matrix(1 0 0 -1 1.65625 21.4211)"
+                            stroke="white" />
+                        <line y1="-0.5" x2="0.657895" y2="-0.5" transform="matrix(-1 0 0 1 1.65625 22)"
+                            stroke="white" />
+                    </svg>
+                    <!-- Left side info: About, Abilities, Stats -->
+                    <div id="heroes-info-part1"
+                        class="w-full md:w-[60%] h-full md:h-full gap-[1rem] md:gap-14 lg:gap-12 min-[1900px]:gap-16 flex flex-col relative">
+
+
+                    </div>
+                    <!-- Right side info: Hero details and image -->
+                    <div id="heroes-info-part2"
+                        class="h-full md:h-full md:w-[40%] lg:w-[30%] 2xl:w-[27%] min-[1900px]:w-[25%] flex flex-row md:flex-col justify-between gap-2  min-[500px]:gap-4">
+                        <!-- Hero details -->
+                        <!-- Hero image container -->
+
+                    </div>
+                </div>
             </div>
         </section>
 
