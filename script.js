@@ -442,6 +442,7 @@ function setupAudioButton() {
     let isIndicatorActive = false;
     let clickCount = 1;
     let fadeIntervalRef = null;
+    const maxVolume = 0.1;
 
     const audioButton = document.getElementById("audio-button");
     const audioElement = document.getElementById("audio-element");
@@ -483,10 +484,10 @@ function setupAudioButton() {
         audioElement.play();
 
         fadeIntervalRef = setInterval(() => {
-            if (audioElement.volume < 0.99) {
-                audioElement.volume = Math.min(audioElement.volume + 0.1, 1);
+            if (audioElement.volume < maxVolume - 0.01) {
+                audioElement.volume = Math.min(audioElement.volume + 0.1, maxVolume);
             } else {
-                audioElement.volume = 1;
+                audioElement.volume = maxVolume;
                 // After volume reached its max, stop the fadeInterval
                 clearInterval(fadeIntervalRef);
                 fadeIntervalRef = null;
