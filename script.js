@@ -690,6 +690,7 @@ setupHeroSectionImages();
 
 setupParallaxEffect();
 
+// Heroes page script
 const aliens_data = [
     {
         name: "Swampfire",
