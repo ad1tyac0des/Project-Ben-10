@@ -1,5 +1,12 @@
 const { animate, svg, createTimeline, stagger } = anime;
 
+const lenis = new Lenis();
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 // ------------------------------------------------------------------------------------------------
 // Preloader Section
 function setupPreloaderAnimations() {
