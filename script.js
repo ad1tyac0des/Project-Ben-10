@@ -1204,7 +1204,7 @@ function setupSeriesSection() {
                                     </div>
                                 </div>
                                 <div class="series-info-bottom  w-full flex  justify-between items-center mt-8 md:mt-0 ">
-                                    <div id="rate-now-button"
+                                    <div id="rate-now-button-${index}"
                                         class="relative  w-[8rem] h-[2.2rem] 2xl:w-[10rem] 2xl:h-[2.5rem] 2xl:bottom-0  cursor-pointer ">
                                         <svg class="w-full h-full" viewBox="0 0 178 56" fill="none"
                                             preserveAspectRatio="none">
@@ -1299,3 +1299,8 @@ function handleCTAButtonAnimations(element) {
 handleCTAButtonAnimations("#sign-in-button");
 handleCTAButtonAnimations("#hamburger-panel-sign-in-button")
 handleCTAButtonAnimations("#view-all-button");
+handleCTAButtonAnimations("#know-more-button");
+handleCTAButtonAnimations("#rate-now-button-0");
+handleCTAButtonAnimations("#rate-now-button-1");
+handleCTAButtonAnimations("#rate-now-button-2");
+handleCTAButtonAnimations("#rate-now-button-3");
