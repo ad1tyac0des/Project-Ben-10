@@ -1,11 +1,137 @@
 const { animate, svg, createTimeline, stagger } = anime;
 
-const lenis = new Lenis();
-function raf(time) {
-    lenis.raf(time);
+function setupLenis() {
+    const lenis = new Lenis();
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
     requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf);
+setupLenis();
+
+function setupSeriesAnimations() {
+    document.querySelectorAll('.left-series').forEach((series) => {
+        gsap.from(series, {
+            opacity: 0,
+            x: -30,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: series,
+                start: "top 50%",
+                end: "top 30%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+
+    document.querySelectorAll('.right-series').forEach((series) => {
+        gsap.from(series, {
+            opacity: 0,
+            x: 30,
+            duration: 0.6,
+            delay: window.innerWidth < 768 ? 0 : 0.35,
+            scrollTrigger: {
+                trigger: series,
+                start: "top 40%",
+                end: "top 20%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+}
+
+function setupChronologyAnimations() {
+    document.querySelectorAll('.left-card').forEach((card, index) => {
+        gsap.from(card, {
+            opacity: 0,
+            x: -30,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 50%",
+                end: "top 30%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+
+    document.querySelectorAll('.right-card').forEach((card, index) => {
+        gsap.from(card, {
+            opacity: 0,
+            x: 30,
+            duration: 0.6,
+            delay: window.innerWidth < 768 ? 0 : 0.35,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 40%",
+                end: "top 20%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+
+    document.querySelectorAll('.last-image').forEach((card, index) => {
+        gsap.from(card, {
+            opacity: 0,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: card,
+                start: "top 40%",
+                end: "top 20%",
+                // scrub: true,
+                // markers: true
+            }
+        });
+    });
+}
+
+// Header Wireframe Animation
+function handleHeaderWireframeAnimations() {
+    document.querySelectorAll('.header-wireframe').forEach((wireframe, index) => {
+        const path = wireframe.querySelector("svg path")
+
+        const pathLength = path.getTotalLength();
+
+        gsap.set(path, { strokeDasharray: pathLength })
+
+        gsap.fromTo(path, {
+            strokeDashoffset: pathLength
+        }, {
+            strokeDashoffset: 0,
+            duration: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: wireframe,
+                start: "top 50%",
+                end: "bottom bottom",
+                // markers: true,
+            }
+        })
+    })
+}
+
+// Section Fade Up Animation
+function sectionFadeUpAnimation(element) {
+    const container = document.querySelector(element);
+    
+    gsap.from(container, {
+        opacity: 0,
+        y: 30,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: container,
+            start: "top 40%",
+            end: "top 20%",
+            // scrub: true,
+            // markers: true
+        }
+    });
+}
 
 // ------------------------------------------------------------------------------------------------
 // Preloader Section
@@ -236,6 +362,13 @@ function setupPreloaderAnimations() {
                 opacity: [0, 1],
                 duration: 1000,
                 ease: "inOutSine",
+                onComplete: () => {
+                    setupSeriesAnimations();
+                    setupChronologyAnimations();
+                    handleHeaderWireframeAnimations();
+                    sectionFadeUpAnimation("#heroes-content");
+                    sectionFadeUpAnimation("#main-forum-container");
+                }
             },
             "<-=500"
         );
@@ -297,7 +430,7 @@ function setupSkipIntroInteractions(tl) {
         }
     });
 }
-// setupPreloaderAnimations();
+setupPreloaderAnimations();
 
 
 // ------------------------------------------------------------------------------------------------
@@ -1244,93 +1377,7 @@ function setupSeriesSection() {
     })
 }
 
-function setupSeriesAnimations() {
-    document.querySelectorAll('.left-series').forEach((series) => {
-        gsap.from(series, {
-            opacity: 0,
-            x: -30,
-            duration: 0.6,
-            scrollTrigger: {
-                trigger: series,
-                start: "top 50%",
-                end: "top 30%",
-                // scrub: true,
-                // markers: true
-            }
-        });
-    });
-
-    document.querySelectorAll('.right-series').forEach((series) => {
-        gsap.from(series, {
-            opacity: 0,
-            x: 30,
-            duration: 0.6,
-            delay: window.innerWidth < 768 ? 0 : 0.35,
-            scrollTrigger: {
-                trigger: series,
-                start: "top 40%",
-                end: "top 20%",
-                // scrub: true,
-                // markers: true
-            }
-        });
-    });
-}
-
 setupSeriesSection();
-setupSeriesAnimations();
-
-
-// ------------------------------------------------------------------------------------------------
-// Chronology Section
-function setupChronologyAnimations() {
-    document.querySelectorAll('.left-card').forEach((card, index) => {
-        gsap.from(card, {
-            opacity: 0,
-            x: -30,
-            duration: 0.6,
-            scrollTrigger: {
-                trigger: card,
-                start: "top 50%",
-                end: "top 30%",
-                // scrub: true,
-                // markers: true
-            }
-        });
-    });
-
-    document.querySelectorAll('.right-card').forEach((card, index) => {
-        gsap.from(card, {
-            opacity: 0,
-            x: 30,
-            duration: 0.6,
-            delay: window.innerWidth < 768 ? 0 : 0.35,
-            scrollTrigger: {
-                trigger: card,
-                start: "top 40%",
-                end: "top 20%",
-                // scrub: true,
-                // markers: true
-            }
-        });
-    });
-
-    document.querySelectorAll('.last-image').forEach((card, index) => {
-        gsap.from(card, {
-            opacity: 0,
-            duration: 0.6,
-            scrollTrigger: {
-                trigger: card,
-                start: "top 40%",
-                end: "top 20%",
-                // scrub: true,
-                // markers: true
-            }
-        });
-    });
-}
-
-setupChronologyAnimations();
 
 // ------------------------------------------------------------------------------------------------
 // Forum Section
@@ -1440,7 +1487,6 @@ function handleFooterTextAnimation() {
 }
 handleFooterTextAnimation();
 
-
 // ------------------------------------------------------------------------------------------------
 // CTA Button Animations
 function handleCTAButtonAnimations(element) {
@@ -1467,53 +1513,3 @@ handleCTAButtonAnimations("#rate-now-button-0");
 handleCTAButtonAnimations("#rate-now-button-1");
 handleCTAButtonAnimations("#rate-now-button-2");
 handleCTAButtonAnimations("#rate-now-button-3");
-
-// ------------------------------------------------------------------------------------------------
-// Header Wireframe Animation
-function handleHeaderWireframeAnimations() {
-    document.querySelectorAll('.header-wireframe').forEach((wireframe, index) => {
-        const path = wireframe.querySelector("svg path")
-
-        const pathLength = path.getTotalLength();
-
-        gsap.set(path, { strokeDasharray: pathLength })
-
-        gsap.fromTo(path, {
-            strokeDashoffset: pathLength
-        }, {
-            strokeDashoffset: 0,
-            duration: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: wireframe,
-                start: "top 50%",
-                end: "bottom bottom",
-                // markers: true,
-            }
-        })
-    })
-}
-
-handleHeaderWireframeAnimations();
-
-// ------------------------------------------------------------------------------------------------
-// Section Fade Up Animation
-function sectionFadeUpAnimation(element) {
-    const container = document.querySelector(element);
-    
-    gsap.from(container, {
-        opacity: 0,
-        y: 30,
-        duration: 0.5,
-        scrollTrigger: {
-            trigger: container,
-            start: "top 40%",
-            end: "top 20%",
-            // scrub: true,
-            // markers: true
-        }
-    });
-}
-
-sectionFadeUpAnimation("#heroes-content");
-sectionFadeUpAnimation("#main-forum-container");
