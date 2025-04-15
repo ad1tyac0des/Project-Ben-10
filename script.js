@@ -1363,7 +1363,7 @@ handleCTAButtonAnimations("#rate-now-button-2");
 handleCTAButtonAnimations("#rate-now-button-3");
 
 // ------------------------------------------------------------------------------------------------
-
+// Header Wireframe Animation
 function handleHeaderWireframeAnimations() {
     document.querySelectorAll('.header-wireframe').forEach((wireframe, index) => {
         const path = wireframe.querySelector("svg path")
@@ -1389,3 +1389,69 @@ function handleHeaderWireframeAnimations() {
 }
 
 handleHeaderWireframeAnimations();
+
+
+// ------------------------------------------------------------------------------------------------
+//Footer Text Animation
+function handleFooterTextAnimation() {
+    const textEl = document.getElementById('textElement');
+    const footerSection = document.getElementById('footer-section');
+
+    function handleMouseMove(e) {
+        const { width, left } = footerSection.getBoundingClientRect();
+        const centerX = width / 2;
+
+        const mouseX = e.clientX - left;
+        const relativeX = (mouseX - centerX) / centerX;
+
+        let matrix;
+
+        if (Math.abs(relativeX) < 0.1) {
+            // at Center
+            matrix = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)";
+        } else if (relativeX > 0) {
+            // at Right
+            const intensity = Math.min(Math.abs(relativeX), 1);
+            matrix = `matrix3d(
+        ${0.912144 + (1 - 0.912144) * (1 - intensity)}, 
+        ${-0.221361 * intensity}, 
+        0, 
+        ${0.0011759 * intensity}, 
+        ${0.266799 * intensity}, 
+        ${0.327775 + (1 - 0.327775) * (1 - intensity)}, 
+        0, 
+        ${-0.0004667 * intensity}, 
+        0, 0, 1, 0, 
+        ${334.04 * intensity}, 
+        ${-143.073 * intensity}, 
+        0, 1)`;
+        } else {
+            // at Left
+            const intensity = Math.min(Math.abs(relativeX), 1);
+            matrix = `matrix3d(
+        ${0.956236 + (1 - 0.956236) * (1 - intensity)}, 
+        ${0.232741 * intensity}, 
+        0, 
+        ${-0.0012364 * intensity}, 
+        ${-0.1329 * intensity}, 
+        ${0.293217 + (1 - 0.293217) * (1 - intensity)}, 
+        0, 
+        ${-0.0002324 * intensity}, 
+        0, 0, 1, 0, 
+        ${-378.999 * intensity}, 
+        ${-141.278 * intensity}, 
+        0, 1)`;
+        }
+
+        textEl.style.transform = matrix;
+    }
+
+    function handleMouseLeave() {
+        textEl.style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)";
+    }
+
+    // Add event listeners
+    footerSection.addEventListener('mousemove', handleMouseMove);
+    footerSection.addEventListener('mouseleave', handleMouseLeave);
+}
+handleFooterTextAnimation();
