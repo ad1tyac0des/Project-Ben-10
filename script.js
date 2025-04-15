@@ -219,7 +219,7 @@ function setupPreloaderAnimations() {
             ],
             {
                 draw: ["0 0", "0 1"],
-                duration: 1000,
+                duration: 5000,
                 ease: "inOutSine",
             }
         )
