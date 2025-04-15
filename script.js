@@ -445,12 +445,12 @@ function setupAudioButton() {
     let isIndicatorActive = false;
     let clickCount = 1;
     let fadeIntervalRef = null;
-    let maxVolume = 0.2; 
+    let maxVolume = 0.45; 
 
     const audioButton = document.getElementById("audio-button");
     const audioElement = document.getElementById("audio-element");
     const indicatorLines = document.querySelectorAll(".indicator-line");
-    const volumeButtons = document.querySelectorAll('#volume-control div');
+    const volumePiece = document.querySelector('#volume-piece');
 
     // Main Function which plays the line animation and calls all the audio play/pause functions
     function toggleAudioIndicator() {
@@ -535,21 +535,6 @@ function setupAudioButton() {
     audioButton.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleAudioIndicator();
-    });
-
-    //  Volume pieces logic
-    volumeButtons.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-            const vol = parseFloat(e.target.getAttribute("data-vol"));
-            if (!isNaN(vol)) {
-                maxVolume = vol;
-
-                // If audio already playing, adjust volume instantly
-                if (audioElement && !audioElement.paused) {
-                    audioElement.volume = maxVolume;
-                }
-            }
-        });
     });
 }
 
