@@ -383,6 +383,33 @@ function setupPreloaderAnimations() {
                 }
             },
             "<-=500"
+        ).add(
+            "nav",
+            {
+                opacity: [0, 1],
+                y: [-30, 0],
+                duration: 500,
+                ease: "inOutSine",
+            }, 
+            "<<"
+        ).add(
+            ".hero-main-texts",
+            {
+                opacity: [0, 1],
+                y: [20, 0],
+                duration: 500,
+                ease: "inOutSine",
+            }, 
+            "<<+=100"
+        ).add(
+            ["#hero-image-1", "#hero-image-2", "#hero-image-3"],
+            {
+                opacity: [0, 1],
+                y: [20, 0],
+                duration: 500,
+                ease: "inOutSine",
+            }, 
+            "<<"
         );
 
     // after load complete, resume timeline on click or press space/enter button
