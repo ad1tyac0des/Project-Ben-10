@@ -384,15 +384,6 @@ function setupPreloaderAnimations() {
             },
             "<-=500"
         ).add(
-            "nav",
-            {
-                opacity: [0, 1],
-                y: [-30, 0],
-                duration: 500,
-                ease: "inOutSine",
-            }, 
-            "<<"
-        ).add(
             ".hero-main-texts",
             {
                 opacity: [0, 1],
